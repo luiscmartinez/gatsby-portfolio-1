@@ -14,10 +14,10 @@ export const StyledLanding = styled.div`
   .container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
-    margin: 30vh auto 0;
-
+    margin: auto;
     h1 {
       color: #fff;
       font-size: 4rem;
