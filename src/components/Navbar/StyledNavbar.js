@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledNavbar = styled.div`
-  background: #333;
+  background: #343a40;
   padding: 16px 0;
   position: fixed;
   right: 0;
@@ -15,7 +15,7 @@ export const StyledNavbar = styled.div`
     width: 90%;
     list-style: none;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     li {
       color: #fff;
       margin-right: 20px;
@@ -35,6 +35,6 @@ export const StyledNavbar = styled.div`
   }
   .site-title {
     font-weight: bold;
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 `
