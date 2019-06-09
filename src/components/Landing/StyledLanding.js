@@ -17,6 +17,7 @@ export const StyledLanding = styled.div`
     width: 100%;
     max-width: 1200px;
     margin: 30vh auto 0;
+
     h1 {
       color: #fff;
       font-size: 4rem;
@@ -43,6 +44,12 @@ export const StyledLanding = styled.div`
       padding: 10px 20px;
       margin-top: 20px;
       cursor: pointer;
+    }
+    .carousel {
+      flex: 0 0 50%;
+      img {
+        width: 100%;
+      }
     }
   }
 `
