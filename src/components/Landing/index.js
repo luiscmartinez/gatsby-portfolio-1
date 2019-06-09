@@ -1,11 +1,16 @@
 import React from 'react'
 import { StyledLanding } from './StyledLanding'
+import browser from '../../images/browser.png'
+import bayshells from '../../images/bayshells-landing.png'
 
 export default function index() {
   return (
     <StyledLanding>
       <div className="container">
-        <div>images will go here</div>
+        <div className="carousel">
+          <img src={browser} alt="Carousel frame" />
+          <img src={bayshells} alt="" />
+        </div>
         <div>
           <h1>Welcome to my Portfolio</h1>
           <p>
