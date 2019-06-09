@@ -24,7 +24,7 @@ export const StyledNavbar = styled.div`
         text-decoration: none;
         transition: 200ms ease-out;
         &:hover {
-          color: #34b3a0;
+          color: var(--primary);
           transition: 200ms ease-in;
         }
       }

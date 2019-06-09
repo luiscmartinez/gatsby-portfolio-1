@@ -35,11 +35,11 @@ export const StyledLanding = styled.div`
       text-align: center;
       display: block;
       margin: auto;
-      font-size: 2.1rem;
+      font-size: 2rem;
       color: #fff;
-      background: #34b3a0;
+      background: var(--primary);
       border: none;
-      border-radius: 4px;
+      border-radius: 5px;
       padding: 10px 20px;
       margin-top: 20px;
       cursor: pointer;

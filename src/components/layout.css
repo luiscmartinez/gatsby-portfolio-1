@@ -9,3 +9,7 @@ html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 62.5%;
 }
+
+:root {
+  --primary: #34b3a0;
+}
