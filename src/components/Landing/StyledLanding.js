@@ -45,7 +45,7 @@ export const StyledLanding = styled.div`
       margin-top: 20px;
       cursor: pointer;
     }
-    .carousel {
+    .carousel-wrapper {
       flex: 0 0 50%;
       img {
         width: 100%;
