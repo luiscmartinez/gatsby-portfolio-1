@@ -3,6 +3,8 @@ import bayshells from '../../images/bayshells-landing.png'
 import caseStudy from '../../images/upwork-10-case-study.png'
 import learnLocker from '../../images/learn-locker.png'
 import { setInterval } from 'timers'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { StyledCarousel } from './StyledCarousel'
 
 export default class Carousel extends Component {
   state = {
@@ -39,7 +41,18 @@ export default class Carousel extends Component {
 
     return (
       <>
-        <img src={images[index]} alt="" style={{ height: '330px' }} />
+        <StyledCarousel>
+          <TransitionGroup>
+            <CSSTransition timeout={1000} classNames="fade" key={index}>
+              <img
+                src={images[index]}
+                alt=""
+                style={{ height: '330px' }}
+                className="carousel-img"
+              />
+            </CSSTransition>
+          </TransitionGroup>
+        </StyledCarousel>
       </>
     )
   }
