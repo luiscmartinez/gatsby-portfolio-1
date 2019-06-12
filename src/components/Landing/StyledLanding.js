@@ -46,20 +46,12 @@ export const StyledLanding = styled.div`
       cursor: pointer;
     }
     .carousel-wrapper {
+      position: relative;
       flex: 0 0 50%;
+      height: 395px;
       img {
         width: 100%;
-        &:nth-child(2) {
-          border: 2px solid #fff;
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 12px,
-            rgba(0, 0, 0, 0.23) 0px 6px 12px;
-        }
-        &:nth-child(1) {
-          margin-bottom: -7px;
-          /* border: 2px solid; */
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 12px,
-            rgba(0, 0, 0, 0.23) 0px 6px 12px;
-        }
+        margin-bottom: -7px;
       }
     }
   }
