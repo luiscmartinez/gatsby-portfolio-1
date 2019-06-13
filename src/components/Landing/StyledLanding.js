@@ -24,9 +24,8 @@ export const StyledLanding = styled.div`
       text-align: center;
     }
     p {
-      color: #fff;
+      color: #b9c7cf;
       font-size: 2rem;
-      opacity: 0.7;
       max-width: 550px;
       margin: auto;
       text-align: center;
