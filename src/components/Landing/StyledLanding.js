@@ -15,7 +15,7 @@ export const StyledLanding = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     margin: auto;
     h1 {
@@ -53,6 +53,9 @@ export const StyledLanding = styled.div`
         width: 100%;
         margin-bottom: -7px;
       }
+    }
+    .landing-info {
+      flex: 0 0 45%;
     }
   }
 `
