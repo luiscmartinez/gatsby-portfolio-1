@@ -11,14 +11,7 @@ export default class Carousel extends Component {
     index: 0,
   }
   componentDidMount() {
-    const { images, index } = this.state
-    let length = images.length
-
     setInterval(this.cycleCarousel, 2000)
-
-    if (index >= images.length) {
-      this.setState({ index: 0 })
-    }
   }
 
   cycleCarousel = () => {
@@ -42,7 +35,12 @@ export default class Carousel extends Component {
       <>
         <StyledCarousel>
           <TransitionGroup>
-            <CSSTransition timeout={1000} classNames="fade" key={index}>
+            <CSSTransition
+              timeout={1000}
+              classNames="fade"
+              key={index}
+              appear={true}
+            >
               <img
                 src={images[index]}
                 alt=""
