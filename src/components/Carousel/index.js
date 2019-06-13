@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import bayshells from '../../images/bayshells-landing.png'
 import caseStudy from '../../images/upwork-10-case-study.png'
 import learnLocker from '../../images/learn-locker.png'
-import { setInterval } from 'timers'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { StyledCarousel } from './StyledCarousel'
 
