@@ -1,13 +1,13 @@
 import React from 'react'
 import { StyledNavbar } from './StyledNavbar'
-import { Link } from 'gatsby'
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 export default function Navbar() {
   return (
     <StyledNavbar>
       <ul>
         <li className="site-title">
-          <Link to="#">Riley Brown</Link>
+          <h1 onClick={() => scroll.scrollToTop()}>Riley Brown</h1>
         </li>
         <div>
           <li>
