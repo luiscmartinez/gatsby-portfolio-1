@@ -9,6 +9,7 @@ html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 62.5%;
   overflow-x: hidden;
+  background: #eeeeee;
 }
 
 :root {
