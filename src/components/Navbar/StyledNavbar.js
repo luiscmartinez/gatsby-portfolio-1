@@ -7,7 +7,7 @@ export const StyledNavbar = styled.div`
   right: 0;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   ul {
     display: flex;
     justify-content: space-between;
@@ -20,10 +20,17 @@ export const StyledNavbar = styled.div`
     li {
       color: #fff;
       margin-right: 20px;
-      a {
+      h1 {
+        font-size: 2.2rem;
+        font-weight: bold;
+      }
+      a,
+      h1 {
         color: #fff;
         text-decoration: none;
         transition: 200ms ease-out;
+        cursor: pointer;
+
         &:hover {
           color: var(--primary);
           transition: 200ms ease-in;
