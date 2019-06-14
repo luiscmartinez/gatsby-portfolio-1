@@ -7,7 +7,9 @@ export default function Navbar() {
     <StyledNavbar>
       <ul>
         <li className="site-title">
-          <h1 onClick={() => scroll.scrollToTop()}>Riley Brown</h1>
+          <h1 onClick={() => scroll.scrollToTop({ duration: 500 })}>
+            Riley Brown
+          </h1>
         </li>
         <div>
           <li>
