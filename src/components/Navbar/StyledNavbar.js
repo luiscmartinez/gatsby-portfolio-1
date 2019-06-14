@@ -7,6 +7,7 @@ export const StyledNavbar = styled.div`
   right: 0;
   left: 0;
   top: 0;
+  z-index: 1;
   ul {
     display: flex;
     justify-content: space-between;
