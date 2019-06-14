@@ -29,7 +29,7 @@ export default function Landing() {
               technologies. I am experienced with modern tech such as React and
               Nodejs.
             </p>
-            <Link to="test" smooth={true} duration={500}>
+            <Link to="test" smooth={true} duration={500} offset={-50}>
               <button>See More</button>
             </Link>
           </div>
