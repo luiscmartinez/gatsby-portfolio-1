@@ -4,6 +4,7 @@ import browser from '../../images/browser.png'
 import Carousel from '../Carousel'
 import { CSSTransition } from 'react-transition-group'
 import Fade from 'react-reveal/Fade'
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 export default function Landing() {
   return (
@@ -28,7 +29,9 @@ export default function Landing() {
               technologies. I am experienced with modern tech such as React and
               Nodejs.
             </p>
-            <button>See More</button>
+            <Link to="test" smooth={true} duration={500}>
+              <button>See More</button>
+            </Link>
           </div>
         </CSSTransition>
       </div>
