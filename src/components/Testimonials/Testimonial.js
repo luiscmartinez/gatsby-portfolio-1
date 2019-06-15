@@ -16,8 +16,12 @@ export default function Testimonial(props) {
         {props.body}
       </p>
 
-      <img className="carousel-right" src={leftAngle} />
-      <img className="carousel-left" src={rightAngle} />
+      <span className="carousel-left">
+        <img src={leftAngle} />
+      </span>
+      <span className="carousel-right">
+        <img src={rightAngle} />
+      </span>
     </div>
   )
 }
