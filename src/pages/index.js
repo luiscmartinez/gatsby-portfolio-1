@@ -6,11 +6,13 @@ import Image from '../components/image'
 import SEO from '../components/seo'
 import Landing from '../components/Landing'
 import Skills from '../components/Skills'
+import Testimonials from '../components/Testimonials'
 
 const IndexPage = () => (
   <Layout>
     <Landing />
     <Skills />
+    <Testimonials />
   </Layout>
 )
 
