@@ -7,6 +7,7 @@ export const StyledTestimonials = styled.div`
   text-align: center;
   width: 90%;
   .testimonial {
+    position: relative;
     h2 {
       font-size: 3rem;
       font-weight: normal;
@@ -31,6 +32,32 @@ export const StyledTestimonials = styled.div`
     .star {
       color: var(--primary);
       font-size: 3rem;
+    }
+    .carousel-left,
+    .carousel-right {
+      color: var(--primary);
+      position: absolute;
+      opacity: 0.6;
+      transition: 200ms ease-out;
+      cursor: pointer;
+      padding: 10px;
+      &:hover {
+        opacity: 1;
+        transition: 200ms ease-in;
+      }
+    }
+    .carousel-left img,
+    .carousel-right img {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+    .carousel-left {
+      left: -120px;
+      top: 50%;
+    }
+    .carousel-right {
+      right: -120px;
+      top: 50%;
     }
   }
 `
