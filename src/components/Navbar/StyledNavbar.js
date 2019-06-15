@@ -11,7 +11,7 @@ export const StyledNavbar = styled.div`
   ul {
     display: flex;
     justify-content: space-between;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
     width: 90%;
     list-style: none;

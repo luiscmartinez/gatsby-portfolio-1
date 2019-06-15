@@ -18,7 +18,7 @@ export const StyledSkills = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     width: 90%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 40px auto;
     .card {
       flex: 0 0 30%;
@@ -29,7 +29,7 @@ export const StyledSkills = styled.div`
       align-items: center;
       border-radius: 10px;
       background: #fff;
-      padding: 15px 20px;
+      padding: 20px;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.23);
       h1 {
         text-align: center;
@@ -38,8 +38,8 @@ export const StyledSkills = styled.div`
         margin-bottom: 10px;
       }
       img {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
       }
     }
   }

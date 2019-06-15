@@ -13,7 +13,7 @@ export const StyledLanding = styled.div`
   display: flex;
   .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 90%;
     max-width: 1200px;
