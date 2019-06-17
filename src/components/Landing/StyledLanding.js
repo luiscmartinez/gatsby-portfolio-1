@@ -48,6 +48,9 @@ export const StyledLanding = styled.div`
       position: relative;
       flex: 0 0 50%;
       height: 395px;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 12px,
+        rgba(0, 0, 0, 0.23) 0px 6px 12px;
+
       img {
         width: 100%;
         margin-bottom: -7px;
