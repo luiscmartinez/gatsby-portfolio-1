@@ -1,6 +1,4 @@
 import React from 'react'
-import rightAngle from '../../svg/right.svg'
-import leftAngle from '../../svg/left.svg'
 
 export default function Testimonial(props) {
   return (
@@ -11,17 +9,10 @@ export default function Testimonial(props) {
       <span className="star">&#9733;</span>
       <span className="star">&#9733;</span>
       <span className="star">&#9733;</span>
-      <p>
+      <div className="body">
         <span className="quote">&#10077;</span>
-        {props.body}
-      </p>
-
-      <span className="carousel-left">
-        <img src={leftAngle} />
-      </span>
-      <span className="carousel-right">
-        <img src={rightAngle} />
-      </span>
+        <p>{props.body}</p>
+      </div>
     </div>
   )
 }
