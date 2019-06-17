@@ -6,6 +6,7 @@ import sql from '../../svg/sql.svg'
 import js from '../../svg/javascript.svg'
 import git from '../../svg/git.svg'
 import css from '../../svg/css.svg'
+import Card from './Card'
 
 export default function index() {
   return (
@@ -13,30 +14,12 @@ export default function index() {
       <h2>My Skills</h2>
       <hr className="styled-line" />
       <div className="cards">
-        <div className="card">
-          <h1>Node.js</h1>
-          <img src={node} alt="" />
-        </div>
-        <div className="card">
-          <h1>React.js</h1>
-          <img src={react} alt="" />
-        </div>
-        <div className="card">
-          <h1>JavaScript</h1>
-          <img src={js} alt="" />
-        </div>
-        <div className="card">
-          <h1>SQL</h1>
-          <img src={sql} alt="" />
-        </div>
-        <div className="card">
-          <h1>git</h1>
-          <img src={git} alt="" />
-        </div>
-        <div className="card">
-          <h1>CSS</h1>
-          <img src={css} alt="" />
-        </div>
+        <Card title="Node.js" img={node} />
+        <Card title="React.js" img={react} />
+        <Card title="JavaScript" img={js} />
+        <Card title="SQL" img={sql} />
+        <Card title="git" img={git} />
+        <Card title="CSS" img={css} />
       </div>
     </StyledSkills>
   )
