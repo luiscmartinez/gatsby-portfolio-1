@@ -10,17 +10,12 @@ export default function Landing() {
   return (
     <StyledLanding>
       <div className="container">
-        <div className="carousel-wrapper">
-          <CSSTransition
-            in={true}
-            appear={true}
-            timeout={1000}
-            classNames="fade"
-          >
+        <CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
+          <div className="carousel-wrapper">
             <img src={browser} alt="Carousel frame" />
-          </CSSTransition>
-          <Carousel />
-        </div>
+            <Carousel />
+          </div>
+        </CSSTransition>
         <CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
           <div className="landing-info">
             <h1>Welcome to my Portfolio</h1>
