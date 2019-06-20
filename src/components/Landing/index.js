@@ -9,14 +9,12 @@ import { Link, animateScroll as scroll } from 'react-scroll'
 export default function Landing() {
   return (
     <StyledLanding>
-      <div className="container">
-        <CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
+      <CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
+        <div className="container">
           <div className="carousel-wrapper">
             <img src={browser} alt="Carousel frame" />
             <Carousel />
           </div>
-        </CSSTransition>
-        <CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
           <div className="landing-info">
             <h1>Welcome to my Portfolio</h1>
             <p>
@@ -28,8 +26,8 @@ export default function Landing() {
               <button>See More</button>
             </Link>
           </div>
-        </CSSTransition>
-      </div>
+        </div>
+      </CSSTransition>
     </StyledLanding>
   )
 }
