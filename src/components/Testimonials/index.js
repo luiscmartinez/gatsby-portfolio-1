@@ -34,7 +34,7 @@ export default class Testimonials extends Component {
   }
 
   componentDidMount() {
-    const interval = setInterval(this.cycle, 2000)
+    const interval = setInterval(this.cycle, 4000)
     this.setState({ interval: interval })
   }
 
@@ -58,19 +58,12 @@ export default class Testimonials extends Component {
     const { index, testimonials } = this.state
     return (
       <StyledTestimonials>
-        <TransitionGroup>
-          <CSSTransition
-            timeout={1000}
-            classNames="fade"
-            key={123}
-            appear={true}
-          >
-            <Testimonial
-              title={testimonials[index].title}
-              body={testimonials[index].body}
-            />
-          </CSSTransition>
-        </TransitionGroup>
+        <Testimonial
+          title={testimonials[index].title}
+          body={testimonials[index].body}
+          index={index}
+        />
+
         {/* carousel controls */}
         <span
           className="carousel-left"
