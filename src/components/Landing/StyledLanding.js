@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import landing from '../../images/landing.jpg'
+import { transitionClasses } from '../../helpers/transitionClasses'
 
 export const StyledLanding = styled.div`
+  ${transitionClasses('fade', 1000)};
   background-image: linear-gradient(
       rgba(34, 84, 112, 0.85),
       rgba(34, 84, 112, 0.85)
