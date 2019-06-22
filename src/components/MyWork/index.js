@@ -22,7 +22,7 @@ export default function MyWork() {
   return (
     <StyledMyWork>
       {imgs.map(img => (
-        <Card img={img} />
+        <Card img={img} alt="My Work" />
       ))}
       <Modal />
     </StyledMyWork>
