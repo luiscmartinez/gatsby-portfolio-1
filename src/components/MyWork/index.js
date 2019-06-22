@@ -19,12 +19,32 @@ export default function MyWork() {
     bayshells,
   ])
 
+  const [modalImg, setModalImg] = useState('')
+  const [show, setShow] = useState(false)
+
+  const activeModalImg = img => {
+    setModalImg(img)
+    toggleModal()
+  }
+
+  const toggleModal = () => {
+    setShow(!show)
+  }
+
   return (
     <StyledMyWork>
-      {imgs.map(img => (
-        <Card img={img} alt="My Work" />
-      ))}
-      <Modal />
+      <div className="cards">
+        {imgs.map(img => (
+          <Card
+            img={img}
+            alt="My Work"
+            key={img}
+            activeModalImg={activeModalImg}
+            toggleModal={toggleModal}
+          />
+        ))}
+      </div>
+      <Modal img={modalImg} toggleModal={toggleModal} show={show} />
     </StyledMyWork>
   )
 }
