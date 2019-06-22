@@ -31,11 +31,15 @@ export default class Testimonials extends Component {
       },
     ],
     index: 0,
+    height: '',
   }
 
   componentDidMount() {
     const interval = setInterval(this.cycle, 4000)
     this.setState({ interval: interval })
+
+    let height = document.querySelector('.testimonial').clientHeight
+    this.setState({ height })
   }
 
   cycle = () => {
@@ -52,26 +56,42 @@ export default class Testimonials extends Component {
         index: this.state.index + 1,
       })
     }
-    // }
+
+    let height = document.querySelector('.testimonial').clientHeight
+    this.setState({ height })
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    let height = document.querySelector('.testimonial').clientHeight
+    if (height != prevState.height) {
+      this.setState({ height })
+    }
+  }
+
   render() {
-    const { index, testimonials } = this.state
+    const { index, testimonials, height } = this.state
+
     return (
-      <StyledTestimonials>
+      <StyledTestimonials
+        style={{ height: `${height}px`, transition: '200ms ease-in' }}
+      >
         <Testimonial
           title={testimonials[index].title}
           body={testimonials[index].body}
           index={index}
         />
-
         {/* carousel controls */}
         <span
           className="carousel-left"
           onClick={() => {
             if (index === 0) {
               this.setState({ index: testimonials.length - 1 })
+              let height = document.querySelector('.testimonial').clientHeight
+              this.setState({ height })
             } else {
               this.setState({ index: index - 1 })
+              let height = document.querySelector('.testimonial').clientHeight
+              this.setState({ height })
             }
           }}
         >
@@ -82,8 +102,12 @@ export default class Testimonials extends Component {
           onClick={() => {
             if (index >= testimonials.length - 1) {
               this.setState({ index: 0 })
+              let height = document.querySelector('.testimonial').clientHeight
+              this.setState({ height })
             } else {
               this.setState({ index: index + 1 })
+              let height = document.querySelector('.testimonial').clientHeight
+              this.setState({ height })
             }
           }}
         >
