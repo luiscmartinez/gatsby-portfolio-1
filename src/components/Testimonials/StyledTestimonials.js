@@ -2,17 +2,15 @@ import styled from 'styled-components'
 import { transitionClasses } from '../../helpers/transitionClasses'
 
 export const StyledTestimonials = styled.div`
-  ${transitionClasses('testimonial', 400)}
-  padding-bottom: 50px;
+  ${transitionClasses('testimonial', 400)};
   max-width: 700px;
   margin: auto;
   text-align: center;
   width: 90%;
   position: relative;
-  min-height: 250px;
+
   .testimonial {
     position: absolute;
-
     h2 {
       font-size: 3rem;
       font-weight: normal;
