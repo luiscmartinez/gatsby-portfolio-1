@@ -61,6 +61,7 @@ export default class Testimonials extends Component {
     this.setState({ height })
   }
 
+  // update height state if click to next slide
   componentDidUpdate(prevProps, prevState) {
     let height = document.querySelector('.testimonial').clientHeight
     if (height != prevState.height) {
