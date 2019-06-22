@@ -1,10 +1,13 @@
 import React from 'react'
 import { StyledModal } from './StyledModal'
 
-export default function Modal() {
+export default function Modal({ img, show }) {
   return (
-    <StyledModal>
-      heywOEILfhWIUEFhLUIKEFhbukFHblkefhbkleFSHKFHKELSFJhjkeslFhkesfhkjeslfh
+    <StyledModal style={{ display: show ? 'block' : 'none' }}>
+      <div className="container">
+        <img src={img} alt="" />
+        <span>&times;</span>
+      </div>
     </StyledModal>
   )
 }
