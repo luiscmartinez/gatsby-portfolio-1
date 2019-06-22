@@ -30,11 +30,14 @@ export const StyledNavbar = styled.div`
         text-decoration: none;
         transition: 200ms ease-out;
         cursor: pointer;
-
         &:hover {
           color: var(--primary);
           transition: 200ms ease-in;
+          opacity: 1;
         }
+      }
+      a {
+        opacity: 0.8;
       }
     }
     div {
@@ -44,5 +47,6 @@ export const StyledNavbar = styled.div`
   .site-title {
     font-weight: bold;
     font-size: 2.2rem;
+    opacity: 1;
   }
 `
