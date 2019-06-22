@@ -7,6 +7,7 @@ import caseStudy from '../../images/upwork-10-case-study.png'
 import wbFlashback from '../../images/wb-flashback.jpg'
 import { StyledMyWork } from './StyledMyWork'
 import Card from './Card'
+import Modal from './Modal'
 
 export default function MyWork() {
   const [imgs] = useState([
@@ -23,6 +24,7 @@ export default function MyWork() {
       {imgs.map(img => (
         <Card img={img} />
       ))}
+      <Modal />
     </StyledMyWork>
   )
 }
