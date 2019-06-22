@@ -32,33 +32,58 @@ export default class Testimonials extends Component {
     ],
     index: 0,
     height: '',
+    paused: false,
+    visible: false,
   }
 
   componentDidMount() {
     const interval = setInterval(this.cycle, 4000)
     this.setState({ interval: interval })
 
-    let height = document.querySelector('.testimonial').clientHeight
-    this.setState({ height })
-  }
-
-  cycle = () => {
-    const { index, testimonials } = this.state
-
-    // increase index state if less than images length
-    // if (visible) {
-    if (index >= testimonials.length - 1) {
-      this.setState({
-        index: 0,
-      })
+    if (this.state.paused || this.state.visible) {
+      clearInterval(interval)
     } else {
-      this.setState({
-        index: this.state.index + 1,
-      })
+      setInterval(interval, 4000)
     }
 
     let height = document.querySelector('.testimonial').clientHeight
     this.setState({ height })
+
+    window.addEventListener('scroll', this.isVisible)
+  }
+
+  cycle = () => {
+    const { index, testimonials, visible, paused } = this.state
+
+    // check paused and visible state
+    if (!paused && visible) {
+      // increase index state if less than images length
+      if (index >= testimonials.length - 1) {
+        this.setState({
+          index: 0,
+        })
+      } else {
+        this.setState({
+          index: this.state.index + 1,
+        })
+      }
+    }
+
+    let height = document.querySelector('.testimonial').clientHeight
+    this.setState({ height })
+  }
+
+  isVisible = () => {
+    if (!this.testimonial) return false
+
+    const top = this.testimonial.getBoundingClientRect().top
+    const visible = top >= 0 && top <= window.innerHeight
+
+    if (!visible) {
+      this.setState({ visible: false })
+    } else if (visible) {
+      this.setState({ visible: true })
+    }
   }
 
   // update height state if click to next slide
@@ -75,6 +100,9 @@ export default class Testimonials extends Component {
     return (
       <StyledTestimonials
         style={{ height: `${height}px`, transition: '200ms ease-in' }}
+        onMouseEnter={() => this.setState({ paused: true })}
+        onMouseLeave={() => this.setState({ paused: false })}
+        ref={el => (this.testimonial = el)}
       >
         <Testimonial
           title={testimonials[index].title}
