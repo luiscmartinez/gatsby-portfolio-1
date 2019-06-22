@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
 export const StyledMyWork = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  width: 90%;
-  margin: auto;
+  margin-top: 20px;
+  .cards {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
   .card {
     width: 360px;
     height: 220px;
