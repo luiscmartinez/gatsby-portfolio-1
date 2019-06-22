@@ -1,9 +1,13 @@
 import React from 'react'
 
-export default function Card(props) {
+export default function Card({ img, activeModalImg }) {
   return (
     <div className="card">
-      <img src={props.img} alt="" />
+      <img
+        src={img}
+        alt="my super cool projects... very cool... cool stuff"
+        onClick={() => activeModalImg(img)}
+      />
     </div>
   )
 }
