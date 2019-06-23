@@ -103,6 +103,7 @@ export default class Testimonials extends Component {
         onMouseEnter={() => this.setState({ paused: true })}
         onMouseLeave={() => this.setState({ paused: false })}
         ref={el => (this.testimonial = el)}
+        id="my-work"
       >
         <Testimonial
           title={testimonials[index].title}
