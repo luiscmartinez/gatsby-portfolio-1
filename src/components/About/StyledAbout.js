@@ -8,10 +8,13 @@ export const StyledAbout = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    .about,
+    .about {
+      flex: 0 0 50%;
+    }
     .contact {
       flex: 0 0 45%;
     }
+
     .contact {
       form {
         display: flex;
