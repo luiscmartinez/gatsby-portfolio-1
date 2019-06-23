@@ -4,7 +4,7 @@ export default function index() {
   return (
     <StyledAbout>
       <div className="container">
-        <div className="about">
+        <div className="about" id="about">
           <h2>About Me</h2>
           <p>
             I am a 23 year old developer with a focus on web technology, from
@@ -27,7 +27,7 @@ export default function index() {
             startup in NYC and am loving every second of it.
           </p>
         </div>
-        <div className="contact">
+        <div className="contact" id="contact">
           <h2>Contact Me</h2>
           <form>
             <input type="text" placeholder="Name" />

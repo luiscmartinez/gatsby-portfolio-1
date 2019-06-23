@@ -13,13 +13,17 @@ export default function Navbar() {
         </li>
         <div>
           <li>
-            <Link to="#about">About</Link>
+            <Link to="about" smooth duration={500} offset={-80}>
+              About
+            </Link>
           </li>
           <li>
-            <Link to="#contact">Contact</Link>
+            <Link to="contact" smooth duration={500} offset={-100}>
+              Contact
+            </Link>
           </li>
           <li>
-            <Link to="my-work" smooth={true} duration={500} offset={-120}>
+            <Link to="my-work" smooth duration={500} offset={-120}>
               My Work
             </Link>
           </li>
