@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+import { transitionClasses } from '../../helpers/transitionClasses'
 
 export const StyledMyWork = styled.div`
+  ${transitionClasses('modal', 500)};
   margin-top: 20px;
   .cards {
     width: 90%;
