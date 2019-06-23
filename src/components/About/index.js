@@ -9,7 +9,7 @@ export default function index() {
           <p>
             I am a 23 year old developer with a focus on web technology, from
             Boston, Massachusetts. I discovered web development in early 2018
-            and have been fascinated with it ever since
+            and have been fascinated with it ever since.
           </p>
           <p>
             I started with HTML on CodeCademy, then CSS and JavaScript. I moved
