@@ -19,7 +19,9 @@ export default function Navbar() {
             <Link to="#contact">Contact</Link>
           </li>
           <li>
-            <Link to="#my-work">My Work</Link>
+            <Link to="my-work" smooth={true} duration={500} offset={-120}>
+              My Work
+            </Link>
           </li>
           <li>
             <a href="https://github.com/Riley-Brown" target="_blank">
