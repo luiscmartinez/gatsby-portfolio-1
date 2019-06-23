@@ -8,6 +8,7 @@ import wbFlashback from '../../images/wb-flashback.jpg'
 import { StyledMyWork } from './StyledMyWork'
 import Card from './Card'
 import Modal from './Modal'
+import { CSSTransition } from 'react-transition-group'
 
 export default function MyWork() {
   const [imgs] = useState([
@@ -44,7 +45,9 @@ export default function MyWork() {
           />
         ))}
       </div>
-      <Modal img={modalImg} toggleModal={toggleModal} show={show} />
+      {show ? (
+        <Modal img={modalImg} toggleModal={toggleModal} show={show} />
+      ) : null}
     </StyledMyWork>
   )
 }
