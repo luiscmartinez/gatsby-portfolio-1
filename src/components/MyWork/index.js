@@ -45,9 +45,7 @@ export default function MyWork() {
           />
         ))}
       </div>
-      {show ? (
-        <Modal img={modalImg} toggleModal={toggleModal} show={show} />
-      ) : null}
+      <Modal img={modalImg} toggleModal={toggleModal} show={show} />
     </StyledMyWork>
   )
 }
