@@ -7,6 +7,7 @@ import js from '../../svg/javascript.svg'
 import git from '../../svg/git.svg'
 import css from '../../svg/css.svg'
 import Card from './Card'
+import Fade from 'react-reveal/Fade'
 
 export default function index() {
   return (
