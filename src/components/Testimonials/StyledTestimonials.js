@@ -46,6 +46,9 @@ export const StyledTestimonials = styled.div`
     transition: 200ms ease-out;
     cursor: pointer;
     padding: 10px;
+    height: 150px;
+    display: flex;
+    align-items: center;
     &:hover {
       opacity: 1;
       transition: 200ms ease-in;
