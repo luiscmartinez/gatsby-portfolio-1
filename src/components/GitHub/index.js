@@ -19,9 +19,16 @@ export default function GitHub() {
 
   return (
     <StyledGitHub>
-      {latestRepos.map(repo => (
-        <h1>{repo.name}</h1>
-      ))}
+      <h2 className="title">My Latest Repos</h2>
+      <hr />
+      <div className="cards">
+        {latestRepos.map(repo => (
+          <div className="card">
+            <h2>{repo.name}</h2>
+            {repo.description && <p>{repo.description}</p>}
+          </div>
+        ))}
+      </div>
     </StyledGitHub>
   )
 }
