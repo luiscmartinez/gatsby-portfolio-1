@@ -9,6 +9,7 @@ import Skills from '../components/Skills'
 import Testimonials from '../components/Testimonials'
 import MyWork from '../components/MyWork'
 import About from '../components/About'
+import GitHub from '../components/GitHub'
 
 const IndexPage = () => (
   <Layout>
@@ -17,6 +18,7 @@ const IndexPage = () => (
     <Testimonials />
     <MyWork />
     <About />
+    <GitHub />
   </Layout>
 )
 
