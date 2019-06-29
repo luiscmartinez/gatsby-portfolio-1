@@ -10,11 +10,12 @@ export const StyledModal = styled.div`
   right: 0;
   left: 0;
   z-index: 200;
+  overflow: auto;
   .container {
     max-width: 1200px;
     width: 90%;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 2%;
     position: relative;
     .content {
       text-align: center;
@@ -40,6 +41,7 @@ export const StyledModal = styled.div`
     }
     img {
       width: 95%;
+      cursor: pointer;
     }
     span {
       position: absolute;
