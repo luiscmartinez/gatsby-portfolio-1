@@ -8,7 +8,6 @@ import wbFlashback from '../../images/wb-flashback.jpg'
 import { StyledMyWork } from './StyledMyWork'
 import Card from './Card'
 import Modal from './Modal'
-import { CSSTransition } from 'react-transition-group'
 
 export default function MyWork() {
   const [data] = useState([
