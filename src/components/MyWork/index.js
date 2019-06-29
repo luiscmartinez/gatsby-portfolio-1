@@ -22,43 +22,42 @@ export default function MyWork() {
     },
     {
       img: caseStudy,
-      title: 'Learn Locker',
+      title: 'UpWork Freelance Work',
       body:
-        'LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.',
-      siteLink: 'https://learnedadev.netlify.com/',
-      codeLink: 'https://github.com/learneda',
+        'Website for a client featuring custom hover animations, and custom image carousel using HTML 5 data attributes. Design provided by client.',
+      siteLink: 'https://riley.gg/upwork-10/case-study.html',
+      codeLink: 'https://github.com/Riley-Brown/upwork-10',
     },
     {
       img: instaClone,
-      title: 'Learn Locker',
-      body:
-        'LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.',
-      siteLink: 'https://learnedadev.netlify.com/',
-      codeLink: 'https://github.com/learneda',
+      title: 'Insta Clone React App',
+      body: 'Insta Clone React App',
+      siteLink: 'https://riley.gg/lambda/insta-clone/',
+      codeLink: 'https://github.com/Riley-Brown/React-Insta-Clone',
     },
     {
       img: danielLanding,
-      title: 'Learn Locker',
+      title: 'Daniel D Website',
       body:
-        'LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.',
-      siteLink: 'https://learnedadev.netlify.com/',
-      codeLink: 'https://github.com/learneda',
+        'Personal website built for a client. The awesome design was provided by the client, I just put it all together. Built using Bootstrap.',
+      codeLink: 'https://github.com/Riley-Brown/upwork-4',
+      siteLink: 'https://riley.gg/upwork-4/',
     },
     {
       img: wbFlashback,
-      title: 'Learn Locker',
+      title: 'WB Flashback',
       body:
-        'LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.',
-      siteLink: 'https://learnedadev.netlify.com/',
-      codeLink: 'https://github.com/learneda',
+        'Website built to showcase the changes in Brooklyn, New York, over many years. Includes amazing cross-fade, and split image before and after effects. Built using CSS, and JavaScript.',
+      siteLink: 'https://riley.gg/upwork-3/',
+      codeLink: 'https://github.com/Riley-Brown/upwork-3',
     },
     {
       img: bayshells,
-      title: 'Learn Locker',
+      title: 'Bay Shells Landing Page',
       body:
-        'LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.',
-      siteLink: 'https://learnedadev.netlify.com/',
-      codeLink: 'https://github.com/learneda',
+        'Beautiful modern design provided by the client, includes dynamic clickable tabs, and slick carousel. Built using vanilla CSS and jQuery.',
+      siteLink: 'https://riley.gg/upwork-7/',
+      codeLink: 'https://github.com/Riley-Brown/bayshells-landing',
     },
   ])
 
