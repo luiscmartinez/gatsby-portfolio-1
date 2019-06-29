@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledModal = styled.div`
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.95);
   width: 100%;
   position: fixed;
   top: 0;
@@ -16,6 +16,28 @@ export const StyledModal = styled.div`
     margin: auto;
     margin-top: 5%;
     position: relative;
+    .content {
+      text-align: center;
+      color: #fff;
+      max-width: 700px;
+      width: 90%;
+      margin: 15px auto;
+
+      h4 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+      a {
+        font-size: 2.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: var(--primary);
+        margin: 0px 15px;
+      }
+    }
     img {
       width: 95%;
     }
