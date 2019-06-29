@@ -11,20 +11,62 @@ import Modal from './Modal'
 import { CSSTransition } from 'react-transition-group'
 
 export default function MyWork() {
-  const [imgs] = useState([
-    learnLocker,
-    caseStudy,
-    instaClone,
-    danielLanding,
-    wbFlashback,
-    bayshells,
+  const [data] = useState([
+    {
+      img: learnLocker,
+      title: 'Learn Locker',
+      body:
+        'LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.',
+      siteLink: 'https://learnedadev.netlify.com/',
+      codeLink: 'https://github.com/learneda',
+    },
+    {
+      img: caseStudy,
+      title: 'Learn Locker',
+      body:
+        'LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.',
+      siteLink: 'https://learnedadev.netlify.com/',
+      codeLink: 'https://github.com/learneda',
+    },
+    {
+      img: instaClone,
+      title: 'Learn Locker',
+      body:
+        'LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.',
+      siteLink: 'https://learnedadev.netlify.com/',
+      codeLink: 'https://github.com/learneda',
+    },
+    {
+      img: danielLanding,
+      title: 'Learn Locker',
+      body:
+        'LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.',
+      siteLink: 'https://learnedadev.netlify.com/',
+      codeLink: 'https://github.com/learneda',
+    },
+    {
+      img: wbFlashback,
+      title: 'Learn Locker',
+      body:
+        'LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.',
+      siteLink: 'https://learnedadev.netlify.com/',
+      codeLink: 'https://github.com/learneda',
+    },
+    {
+      img: bayshells,
+      title: 'Learn Locker',
+      body:
+        'LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.',
+      siteLink: 'https://learnedadev.netlify.com/',
+      codeLink: 'https://github.com/learneda',
+    },
   ])
 
-  const [modalImg, setModalImg] = useState('')
   const [show, setShow] = useState(false)
+  const [index, setIndex] = useState(0)
 
-  const activeModalImg = img => {
-    setModalImg(img)
+  const activeModalImg = index => {
+    setIndex(index)
     toggleModal()
   }
 
@@ -35,17 +77,18 @@ export default function MyWork() {
   return (
     <StyledMyWork>
       <div className="cards">
-        {imgs.map(img => (
+        {data.map((item, index) => (
           <Card
-            img={img}
+            img={item.img}
+            index={index}
             alt="My Work"
-            key={img}
+            key={item.img}
             activeModalImg={activeModalImg}
             toggleModal={toggleModal}
           />
         ))}
       </div>
-      <Modal img={modalImg} toggleModal={toggleModal} show={show} />
+      <Modal data={data[index]} toggleModal={toggleModal} show={show} />
     </StyledMyWork>
   )
 }
