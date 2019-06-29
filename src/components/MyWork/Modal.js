@@ -3,7 +3,7 @@ import { StyledModal } from './StyledModal'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 export default function Modal(props) {
-  const { title, body, siteLink, repoLink, img } = props.data
+  const { title, body, siteLink, codeLink, img } = props.data
   return (
     <CSSTransition
       timeout={300}
@@ -24,7 +24,7 @@ export default function Modal(props) {
             <h4>{title}</h4>
             <p>{body}</p>
             <a href={siteLink}>Visit Site</a>
-            <a href={repoLink}>View Code</a>
+            <a href={codeLink}>View Code</a>
           </div>
         </div>
       </StyledModal>
