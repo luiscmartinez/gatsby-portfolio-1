@@ -8,7 +8,9 @@ export const StyledTestimonials = styled.div`
   text-align: center;
   width: 90%;
   position: relative;
-
+  .react-reveal {
+    position: relative;
+  }
   .testimonial {
     position: absolute;
     h2 {
