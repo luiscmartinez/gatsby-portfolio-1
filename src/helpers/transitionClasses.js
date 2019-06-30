@@ -6,7 +6,7 @@ export const transitionClasses = (name, timeout) => `
   }
   .${name}-appear.${name}-appear-active {
     opacity: 1;
-    transition: opacity ${timeout}ms ease-in;
+    transition: opacity ${timeout}ms ease-out;
   }
 
  
@@ -16,14 +16,14 @@ export const transitionClasses = (name, timeout) => `
   }
   .${name}-enter.${name}-enter-active {
     opacity: 1;
-    transition: opacity ${timeout}ms linear;
+    transition: opacity ${timeout}ms ease-in;
   }
   .${name}-exit {
     opacity: 1;
   }
   .${name}-exit.${name}-exit-active {
     opacity: 0;
-    transition: opacity ${timeout}ms linear;
+    transition: opacity ${timeout}ms ease-in;
   }
   .${name}-exit-done {
     opacity: 0;
