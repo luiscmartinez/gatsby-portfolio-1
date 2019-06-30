@@ -8,11 +8,28 @@ export const StyledAbout = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 90%;
+    @media (max-width: 1150px) {
+      justify-content: center;
+    }
     .about {
       flex: 0 0 50%;
+      @media (max-width: 1150px) {
+        flex: 0 0 80%;
+        margin-bottom: 40px;
+      }
+      @media (max-width: 768px) {
+        flex: 0 0 100%;
+      }
     }
     .contact {
       flex: 0 0 45%;
+      @media (max-width: 1150px) {
+        flex: 0 0 80%;
+      }
+      @media (max-width: 768px) {
+        flex: 0 0 100%;
+      }
     }
 
     .contact {
