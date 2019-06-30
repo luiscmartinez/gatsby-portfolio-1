@@ -60,16 +60,34 @@ export const StyledTestimonials = styled.div`
   .carousel-right img {
     width: 3.5rem;
     height: 3.5rem;
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
   .carousel-left {
     left: -120px;
     top: 50%;
     transform: translate(-50%, -50%);
+    @media (max-width: 1050px) {
+      left: -80px;
+    }
+    @media (max-width: 900px) {
+      left: 0px;
+      top: 30%;
+    }
   }
   .carousel-right {
     right: -120px;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(50%, -50%);
+    @media (max-width: 1050px) {
+      right: -80px;
+      top: 30%;
+    }
+    @media (max-width: 900px) {
+      right: 0px;
+    }
+
     img {
       animation: bounce 2s infinite;
     }
