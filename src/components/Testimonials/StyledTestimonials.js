@@ -13,9 +13,13 @@ export const StyledTestimonials = styled.div`
   }
   .testimonial {
     position: absolute;
+    width: 100%;
     h2 {
       font-size: 3rem;
       font-weight: normal;
+      @media (max-width: 600px) {
+        font-size: 2.7rem;
+      }
     }
     .quote {
       font-size: 5rem;
@@ -24,6 +28,9 @@ export const StyledTestimonials = styled.div`
       left: 10px;
       display: inline-block;
       height: 0;
+      @media (max-width: 600px) {
+        font-size: 4rem;
+      }
     }
     p {
       font-size: 2.1rem;
@@ -31,6 +38,9 @@ export const StyledTestimonials = styled.div`
       line-height: 1.4;
       position: relative;
       opacity: 0.75;
+      @media (max-width: 600px) {
+        font-size: 1.9rem;
+      }
     }
     .star {
       color: var(--primary);
@@ -55,14 +65,14 @@ export const StyledTestimonials = styled.div`
       opacity: 1;
       transition: 200ms ease-in;
     }
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
   .carousel-left img,
   .carousel-right img {
     width: 3.5rem;
     height: 3.5rem;
-    @media (max-width: 600px) {
-      display: none;
-    }
   }
   .carousel-left {
     left: -120px;
