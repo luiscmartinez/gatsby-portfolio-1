@@ -20,19 +20,32 @@ export const StyledMyWork = styled.div`
       rgba(0, 0, 0, 0.23) 0px 6px 12px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.23);
     border-radius: 12px;
-
+    @media (max-width: 1300px) {
+      width: 45%;
+      height: 270px;
+    }
+    @media (max-width: 900px) {
+      width: 100%;
+      height: auto;
+    }
     img {
       width: 100%;
       object-fit: fill;
-      width: 360px;
       height: 220px;
       border: 1px solid #444;
       border-radius: 12px;
       cursor: pointer;
+      display: block;
       transition: 150ms ease-out;
       &:hover {
         transform: scale(1.02);
         transition: 150ms ease-in;
+      }
+      @media (max-width: 1300px) {
+        height: 270px;
+      }
+      @media (max-width: 900px) {
+        height: 100%;
       }
     }
   }
