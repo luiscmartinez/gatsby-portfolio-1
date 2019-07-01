@@ -14,9 +14,8 @@ export const StyledModal = styled.div`
   .container {
     max-width: 1200px;
     width: 90%;
-    margin: auto;
-    margin-top: 2%;
     position: relative;
+    margin: 5% auto;
     .content {
       text-align: center;
       color: #fff;
