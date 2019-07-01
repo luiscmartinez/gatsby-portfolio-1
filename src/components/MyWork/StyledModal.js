@@ -32,6 +32,7 @@ export const StyledModal = styled.div`
         opacity: 0.85;
         max-width: 650px;
         margin: auto;
+        font-weight: 500;
       }
       a {
         font-size: 2.2rem;
