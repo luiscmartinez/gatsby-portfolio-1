@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledModal = styled.div`
   height: 100vh;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.92);
   width: 100%;
   position: fixed;
   top: 0;
@@ -29,10 +29,13 @@ export const StyledModal = styled.div`
       p {
         font-size: 2rem;
         margin-bottom: 10px;
+        opacity: 0.85;
+        max-width: 650px;
+        margin: auto;
       }
       a {
         font-size: 2.2rem;
-        font-weight: bold;
+        font-weight: 500;
         text-decoration: none;
         color: var(--primary);
         margin: 0px 15px;
