@@ -26,6 +26,9 @@ export const StyledGitHub = styled.div`
     text-align: center;
     flex: 0 0 45%;
     margin-bottom: 50px;
+    @media (max-width: 850px) {
+      flex: 0 0 100%;
+    }
     h2 {
       font-size: 3rem;
       color: var(--primary);
@@ -42,12 +45,13 @@ export const StyledGitHub = styled.div`
       outline: none;
       background: none;
       text-align: center;
-      width: 350px;
+      width: 80%;
       color: #fff;
       padding: 6px;
       font-size: 1.4rem;
       border-radius: 5px;
       margin: auto auto 7px;
+      max-width: 350px;
     }
   }
 `
