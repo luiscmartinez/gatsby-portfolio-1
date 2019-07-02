@@ -4,6 +4,7 @@ export const StyledGitHub = styled.div`
   max-width: 1200px;
   padding-bottom: 100px;
   margin: auto;
+  width: 90%;
   .title {
     text-align: center;
     font-size: 4rem;
@@ -27,9 +28,26 @@ export const StyledGitHub = styled.div`
     margin-bottom: 50px;
     h2 {
       font-size: 3rem;
+      color: var(--primary);
     }
     p {
       font-size: 1.8rem;
+      max-width: 300px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    button {
+      display: block;
+      border: none;
+      outline: none;
+      background: none;
+      text-align: center;
+      width: 350px;
+      color: #fff;
+      padding: 6px;
+      font-size: 1.4rem;
+      border-radius: 5px;
+      margin: auto auto 7px;
     }
   }
 `

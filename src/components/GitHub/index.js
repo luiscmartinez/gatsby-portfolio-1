@@ -27,9 +27,15 @@ export default function GitHub() {
             <div className="card">
               <h2>{repo.name}</h2>
               {repo.description && <p>{repo.description}</p>}
-              <button>Stars: {repo.stargazers_count}</button>
-              <button>Watchers: {repo.watchers_count}</button>
-              <button>Forks: {repo.forks}</button>
+              <button style={{ background: 'var(--primary)' }}>
+                Stars: {repo.stargazers_count}
+              </button>
+              <button style={{ background: '#6c757d' }}>
+                Watchers: {repo.watchers_count}
+              </button>
+              <button style={{ background: '#007bff' }}>
+                Forks: {repo.forks}
+              </button>
             </div>
           </Fade>
         ))}
