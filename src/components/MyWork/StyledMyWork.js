@@ -49,4 +49,16 @@ export const StyledMyWork = styled.div`
       }
     }
   }
+  .LazyLoad {
+    height: 220px;
+    @media (max-width: 1300px) {
+      height: 270px;
+    }
+    @media (max-width: 900px) {
+      height: auto;
+    }
+    @media (max-width: 500px) {
+      height: 200px;
+    }
+  }
 `
