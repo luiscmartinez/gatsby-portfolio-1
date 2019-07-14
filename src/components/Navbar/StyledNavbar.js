@@ -23,6 +23,9 @@ export const StyledNavbar = styled.div`
       h1 {
         font-size: 2.2rem;
         font-weight: bold;
+        @media (max-width: 768px) {
+          font-size: 2rem;
+        }
       }
       a,
       h1 {
@@ -42,11 +45,20 @@ export const StyledNavbar = styled.div`
     }
     div {
       display: flex;
+      img {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        li {
+          display: none;
+        }
+        img {
+          display: block;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+        }
+      }
     }
-  }
-  .site-title {
-    font-weight: bold;
-    font-size: 2.2rem;
-    opacity: 1;
   }
 `
