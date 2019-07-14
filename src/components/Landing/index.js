@@ -15,10 +15,10 @@ export default function Landing() {
 
   return (
     <>
-      {!loaded && <Spinner />}
+      {loaded == false && <Spinner />}
 
-      {loaded && (
-        <StyledLanding>
+      <StyledLanding>
+        {loaded && (
           <CSSTransition
             in={loaded}
             appear={loaded}
@@ -43,8 +43,8 @@ export default function Landing() {
               </div>
             </div>
           </CSSTransition>
-        </StyledLanding>
-      )}
+        )}
+      </StyledLanding>
     </>
   )
 }
