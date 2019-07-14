@@ -9,10 +9,11 @@ export const StyledLanding = styled.div`
       rgba(34, 84, 112, 0.85)
     ),
     url(${landing});
-  height: 100vh;
+  min-height: 100vh;
   background-position: center;
   background-size: cover;
   display: flex;
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -20,10 +21,20 @@ export const StyledLanding = styled.div`
     width: 90%;
     max-width: 1200px;
     margin: auto;
+    flex-wrap: wrap;
+    @media (max-width: 1100px) {
+      justify-content: center;
+    }
     h1 {
       color: #fff;
       font-size: 4rem;
       text-align: center;
+      @media (max-width: 900px) {
+        font-size: 3.2rem;
+      }
+      @media (max-width: 500px) {
+        font-size: 2.5rem;
+      }
     }
     p {
       color: #b9c7cf;
@@ -34,6 +45,13 @@ export const StyledLanding = styled.div`
       line-height: 1.4;
       @media (max-width: 1280px) {
         max-width: 500px;
+      }
+      @media (max-width: 900px) {
+        font-size: 1.9rem;
+      }
+      @media (max-width: 500px) {
+        font-size: 1.7rem;
+        line-height: 1.5;
       }
     }
     button {
@@ -48,13 +66,34 @@ export const StyledLanding = styled.div`
       padding: 10px 20px;
       margin-top: 20px;
       cursor: pointer;
+      @media (max-width: 900px) {
+        margin-top: 10px;
+      }
     }
     .carousel-wrapper {
       position: relative;
+
       flex: 0 0 50%;
       height: 395px;
       box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 12px,
         rgba(0, 0, 0, 0.23) 0px 6px 12px;
+      @media (max-width: 1230px) {
+        height: 340px;
+      }
+
+      @media (max-width: 1100px) {
+        flex: 0 0 70%;
+      }
+      @media (max-width: 900px) {
+        height: 250px;
+      }
+      @media (max-width: 600px) {
+        flex: 0 0 90%;
+      }
+      @media (max-width: 500px) {
+        flex: 0 0 100%;
+        display: none;
+      }
 
       img {
         width: 100%;
@@ -63,6 +102,17 @@ export const StyledLanding = styled.div`
     }
     .landing-info {
       flex: 0 0 45%;
+      @media (max-width: 1100px) {
+        flex: 0 0 70%;
+        order: -1;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 768px) {
+        flex: 0 0 90%;
+      }
+      @media (max-width: 600px) {
+        flex: 0 0 100%;
+      }
     }
   }
 `
