@@ -11,7 +11,6 @@ export default function GitHub() {
       const data = await axios.get(
         'https://supersystem-mailchimp-api.herokuapp.com/github'
       )
-      console.log(data)
       setLatestRepos(data.data)
     }
     repos()
@@ -23,7 +22,7 @@ export default function GitHub() {
       <hr />
       <div className="cards">
         {latestRepos.map(repo => (
-          <Fade cascade>
+          <Fade cascade key={repo.id}>
             <div className="card">
               <h2>{repo.name}</h2>
               {repo.description && <p>{repo.description}</p>}
