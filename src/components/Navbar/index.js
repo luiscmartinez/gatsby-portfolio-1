@@ -1,19 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { StyledNavbar } from './StyledNavbar'
 import { Link, animateScroll as scroll } from 'react-scroll'
 import menuIcon from '../../images/menu.svg'
+import MobileNavbar from './MobileNavbar'
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggle = () => {
+    setMenuOpen(!menuOpen)
+  }
+
+  if (menuOpen) {
+    document.querySelector('html').style.overflowY = 'hidden'
+  } else {
+    document.querySelector('html').style.overflowY = 'auto'
+  }
+
   return (
     <StyledNavbar>
-      <ul>
+      <ul className="navbar-content">
         <li className="site-title">
           <h1 onClick={() => scroll.scrollToTop({ duration: 500 })}>
             Riley Brown
           </h1>
         </li>
         <div>
-          <img src={menuIcon} alt="" />
           <li>
             <Link to="about" smooth duration={500} offset={-80}>
               About
@@ -40,7 +52,14 @@ export default function Navbar() {
             </a>
           </li>
         </div>
+        <img
+          src={menuIcon}
+          alt=""
+          onClick={toggle}
+          className="mobile-menu-icon"
+        />
       </ul>
+      <MobileNavbar menuOpen={menuOpen} toggle={toggle} />
     </StyledNavbar>
   )
 }
