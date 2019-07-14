@@ -11,11 +11,13 @@ export default function Navbar() {
     setMenuOpen(!menuOpen)
   }
 
-  if (menuOpen) {
-    document.querySelector('html').style.overflowY = 'hidden'
-  } else {
-    document.querySelector('html').style.overflowY = 'auto'
-  }
+  useEffect(() => {
+    if (menuOpen) {
+      document.querySelector('html').style.overflowY = 'hidden'
+    } else {
+      document.querySelector('html').style.overflowY = 'auto'
+    }
+  }, [menuOpen])
 
   return (
     <StyledNavbar>
