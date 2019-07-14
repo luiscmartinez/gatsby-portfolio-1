@@ -34,11 +34,11 @@ export default function index() {
         <Fade>
           <div className="contact" id="contact">
             <h2>Contact Me</h2>
-            <form>
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
+            <form name="contact" method="POST" data-netlify="true">
+              <input type="text" placeholder="Name" name="name" />
+              <input type="email" placeholder="Email" name="email" />
               <textarea
-                name=""
+                name="message"
                 placeholder="Message"
                 id=""
                 cols="30"

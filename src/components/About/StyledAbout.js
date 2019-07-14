@@ -56,6 +56,7 @@ export const StyledAbout = styled.div`
           background: var(--primary);
           color: #fff;
           font-size: 1.6rem;
+          cursor: pointer;
         }
       }
     }
