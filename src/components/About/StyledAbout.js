@@ -50,6 +50,7 @@ export const StyledAbout = styled.div`
           margin-bottom: 10px;
           resize: none;
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          -webkit-appearance: none;
         }
         #submit {
           background: var(--primary);
