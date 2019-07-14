@@ -16,6 +16,12 @@ export const StyledModal = styled.div`
     width: 90%;
     position: relative;
     margin: 5% auto;
+    @media (max-width: 600px) {
+      margin: 15% auto;
+    }
+    @media (max-width: 600px) {
+      width: 95%;
+    }
     .content {
       text-align: center;
       color: #fff;
@@ -45,6 +51,9 @@ export const StyledModal = styled.div`
     img {
       width: 95%;
       cursor: pointer;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
     span {
       position: absolute;
