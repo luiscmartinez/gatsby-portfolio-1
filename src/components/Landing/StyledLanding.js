@@ -23,6 +23,9 @@ export const StyledLanding = styled.div`
     margin: auto;
     flex-wrap: wrap;
     padding: 70px 0;
+    @media (max-height: 450px) {
+      padding: 90px 0;
+    }
     @media (max-width: 1100px) {
       justify-content: center;
     }
