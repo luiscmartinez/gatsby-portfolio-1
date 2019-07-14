@@ -43,7 +43,8 @@ export const StyledAbout = styled.div`
         display: flex;
         flex-direction: column;
         input,
-        textarea {
+        textarea,
+        button {
           padding: 10px;
           border: 1px solid lightgrey;
           border-radius: 5px;

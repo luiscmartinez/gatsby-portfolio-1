@@ -35,21 +35,19 @@ export default function index() {
           <div className="contact" id="contact">
             <h2>Contact Me</h2>
             <form name="contact" method="POST" data-netlify="true">
-              <input type="text" placeholder="Name" name="name" />
-              <input type="email" placeholder="Email" name="email" />
+              <input name="name" type="text" placeholder="Name" required />
+              <input name="email" type="email" placeholder="Email" required />
               <textarea
+                required
                 name="message"
                 placeholder="Message"
                 id=""
                 cols="30"
                 rows="10"
               />
-              <input
-                type="submit"
-                value="Submit Form"
-                id="submit"
-                name="submit"
-              />
+              <button type="submit" id="submit">
+                Submit
+              </button>
             </form>
           </div>
         </Fade>
