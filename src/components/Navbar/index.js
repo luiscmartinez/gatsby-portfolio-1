@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyledNavbar } from './StyledNavbar'
 import { Link, animateScroll as scroll } from 'react-scroll'
+import menuIcon from '../../images/menu.svg'
 
 export default function Navbar() {
   return (
@@ -12,6 +13,7 @@ export default function Navbar() {
           </h1>
         </li>
         <div>
+          <img src={menuIcon} alt="" />
           <li>
             <Link to="about" smooth duration={500} offset={-80}>
               About
