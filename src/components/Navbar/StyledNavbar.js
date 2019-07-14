@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+import { transitionClasses } from '../../helpers/transitionClasses'
 
 export const StyledNavbar = styled.div`
+  ${transitionClasses('modal', 300)};
   background: #343a40;
   padding: 16px 0;
   position: fixed;
@@ -8,7 +10,7 @@ export const StyledNavbar = styled.div`
   left: 0;
   top: 0;
   z-index: 1;
-  ul {
+  ul.navbar-content {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
@@ -59,6 +61,15 @@ export const StyledNavbar = styled.div`
           cursor: pointer;
         }
       }
+    }
+  }
+  .mobile-menu-icon {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
     }
   }
 `
