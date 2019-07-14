@@ -22,6 +22,7 @@ export const StyledLanding = styled.div`
     max-width: 1200px;
     margin: auto;
     flex-wrap: wrap;
+    padding: 70px 0;
     @media (max-width: 1100px) {
       justify-content: center;
     }
@@ -72,7 +73,6 @@ export const StyledLanding = styled.div`
     }
     .carousel-wrapper {
       position: relative;
-
       flex: 0 0 50%;
       height: 395px;
       box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 12px,
