@@ -14,6 +14,7 @@ export const StyledTestimonials = styled.div`
   .testimonial {
     position: absolute;
     width: 100%;
+    will-change: contents;
     h2 {
       font-size: 3rem;
       font-weight: normal;
