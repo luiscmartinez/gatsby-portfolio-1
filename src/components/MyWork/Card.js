@@ -5,7 +5,7 @@ import LazyLoad from 'react-lazy-load'
 export default function Card({ img, activeModalImg, index }) {
   const key = Math.random()
   return (
-    <Fade key={key}>
+    <Fade>
       <div className="card">
         <LazyLoad offsetVertical={500} once>
           <img
