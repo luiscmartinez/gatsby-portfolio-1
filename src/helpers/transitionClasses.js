@@ -2,7 +2,6 @@ export const transitionClasses = (name, timeout) => `
  
   .${name}-appear {
     opacity: 0;
-    z-index: 1;
   }
   .${name}-appear.${name}-appear-active {
     opacity: 1;
@@ -12,7 +11,6 @@ export const transitionClasses = (name, timeout) => `
  
   .${name}-enter {
     opacity: 0;
-    z-index: 1;
   }
   .${name}-enter.${name}-enter-active {
     opacity: 1;
