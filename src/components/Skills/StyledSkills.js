@@ -18,6 +18,9 @@ export const StyledSkills = styled.div`
     display: block;
     margin: 20px auto;
     border: 2px solid #222;
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
   }
   .cards {
     display: flex;
