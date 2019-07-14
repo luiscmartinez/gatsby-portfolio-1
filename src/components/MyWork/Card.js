@@ -7,7 +7,7 @@ export default function Card({ img, activeModalImg, index }) {
   return (
     <Fade key={key}>
       <div className="card">
-        <LazyLoad offsetVertical={500}>
+        <LazyLoad offsetVertical={500} height={220}>
           <img
             src={img}
             alt="my super cool projects... very cool... cool stuff"
