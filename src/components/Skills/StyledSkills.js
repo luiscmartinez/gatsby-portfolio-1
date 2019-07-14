@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 export const StyledSkills = styled.div`
   padding: 50px 0;
+  @media (max-width: 600px) {
+    padding-bottom: 2rem;
+  }
   h2 {
     font-size: 5rem;
     text-align: center;

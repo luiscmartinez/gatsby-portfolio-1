@@ -12,6 +12,12 @@ export const StyledAbout = styled.div`
     @media (max-width: 1150px) {
       justify-content: center;
     }
+    @media (max-width: 900px) {
+      padding: 70px 0;
+    }
+    @media (max-width: 600px) {
+      padding: 40px 0;
+    }
     .about {
       flex: 0 0 50%;
       @media (max-width: 1150px) {
