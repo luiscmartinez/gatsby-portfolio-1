@@ -12,6 +12,7 @@ export const StyledMobileNavbar = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: center;
+  overflow-y: auto;
   ul {
     width: 100%;
     margin: 50px 0;
