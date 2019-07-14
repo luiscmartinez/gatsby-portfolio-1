@@ -14,7 +14,7 @@ export default function MobileNavbar({ menuOpen, toggle }) {
               to="about"
               smooth
               duration={500}
-              offset={-120}
+              offset={-70}
             >
               About
             </Link>
@@ -25,7 +25,7 @@ export default function MobileNavbar({ menuOpen, toggle }) {
               to="contact"
               smooth
               duration={500}
-              offset={-120}
+              offset={-70}
             >
               Contact
             </Link>
@@ -36,7 +36,7 @@ export default function MobileNavbar({ menuOpen, toggle }) {
               to="my-work"
               smooth
               duration={500}
-              offset={-120}
+              offset={-70}
             >
               My Work
             </Link>
