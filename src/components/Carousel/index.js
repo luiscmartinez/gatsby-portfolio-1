@@ -68,12 +68,7 @@ export default class Carousel extends Component {
             key={index}
             appear={true}
           >
-            <img
-              src={images[index]}
-              alt=""
-              style={{ height: '330px' }}
-              className="carousel-img"
-            />
+            <img src={images[index]} alt="" className="carousel-img" />
           </CSSTransition>
         </TransitionGroup>
       </StyledCarousel>
