@@ -44,7 +44,8 @@ export const StyledAbout = styled.div`
         flex-direction: column;
         input,
         textarea,
-        button {
+        button,
+        span {
           padding: 10px;
           border: 1px solid lightgrey;
           border-radius: 5px;
@@ -72,5 +73,21 @@ export const StyledAbout = styled.div`
     font-size: 1.9rem;
     margin-bottom: 20px;
     line-height: 1.6;
+  }
+  button {
+    position: relative;
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+    }
+  }
+  span {
+    font-size: 1.6rem;
+    text-align: center;
+    background: var(--primary);
+    color: #fff;
   }
 `

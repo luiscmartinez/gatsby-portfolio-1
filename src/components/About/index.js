@@ -2,30 +2,37 @@ import React, { useState } from 'react'
 import { StyledAbout } from './StyledAbout'
 import Fade from 'react-reveal/Fade'
 import axios from 'axios'
+import formSpinner from '../../svg/formSpinner.svg'
 
 export default function About() {
   const [inputs, setInputs] = useState({})
+  const [saving, setSaving] = useState(false)
+  const [saved, setSaved] = useState(null)
+
+  // form encode for netlify
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
+
+  // post form to netlify
   const onSubmit = e => {
     e.preventDefault()
-    // const data = {}
+    setSaving(true)
+
     const config = {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
     }
-
-    const encode = data => {
-      return Object.keys(data)
-        .map(
-          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-        )
-        .join('&')
-    }
-
     axios
       .post('/', encode({ 'form-name': 'contact', ...inputs }), config)
-      .then(res => console.log(res, 'success'))
-      .catch(err => console.log(err))
+      .then(() => setSaved(true))
+      .catch(err => {
+        console.log(err)
+        setSaving(false)
+      })
   }
 
   const onChange = e => {
@@ -87,9 +94,14 @@ export default function About() {
                 rows="10"
                 onChange={onChange}
               />
-              <button type="submit" id="submit">
-                Submit
-              </button>
+              {saved ? (
+                <span>Message sent! I'll get back to you soon.</span>
+              ) : (
+                <button type="submit" id="submit">
+                  {saving ? 'Sending...' : 'Submit'}
+                  {saving && <img src={formSpinner} alt="" />}
+                </button>
+              )}
             </form>
           </div>
         </Fade>
