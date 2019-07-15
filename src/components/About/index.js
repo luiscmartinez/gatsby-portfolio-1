@@ -1,8 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyledAbout } from './StyledAbout'
 import Fade from 'react-reveal/Fade'
+import axios from 'axios'
 
-export default function index() {
+export default function About() {
+  const [inputs, setInputs] = useState({})
+  const onSubmit = e => {
+    e.preventDefault()
+    // const data = {}
+    const config = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    }
+
+    const encode = data => {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&')
+    }
+
+    axios
+      .post('/', encode({ 'form-name': 'contact', ...inputs }), config)
+      .then(res => console.log(res, 'success'))
+      .catch(err => console.log(err))
+  }
+
+  const onChange = e => {
+    setInputs({ ...inputs, [e.target.name]: e.target.value })
+  }
+
   return (
     <StyledAbout>
       <div className="container">
@@ -34,9 +63,21 @@ export default function index() {
         <Fade>
           <div className="contact" id="contact">
             <h2>Contact Me</h2>
-            <form name="contact" method="POST" data-netlify="true">
-              <input name="name" type="text" placeholder="Name" required />
-              <input name="email" type="email" placeholder="Email" required />
+            <form onSubmit={onSubmit}>
+              <input
+                name="name"
+                type="text"
+                placeholder="Name"
+                required
+                onChange={onChange}
+              />
+              <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                required
+                onChange={onChange}
+              />
               <textarea
                 required
                 name="message"
@@ -44,6 +85,7 @@ export default function index() {
                 id=""
                 cols="30"
                 rows="10"
+                onChange={onChange}
               />
               <button type="submit" id="submit">
                 Submit
