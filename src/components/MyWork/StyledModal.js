@@ -10,7 +10,7 @@ export const StyledModal = styled.div`
   right: 0;
   left: 0;
   z-index: 200;
-  overflow: auto;
+  /* overflow: auto; */
   .container {
     max-width: 1200px;
     width: 90%;
