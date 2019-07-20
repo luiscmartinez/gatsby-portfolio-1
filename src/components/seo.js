@@ -70,7 +70,7 @@ function SEO({ description, lang, meta, title, img }) {
         },
         {
           property: `og:image`,
-          content: img,
+          content: `https://Riley.gg${img}`,
         },
         {
           property: `og:url`,
