@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { StyledModal } from './StyledModal'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import { CSSTransition } from 'react-transition-group'
 
 export default function Modal(props) {
   const { title, body, siteLink, codeLink, img } = props.data
 
-  useEffect(() => {
-    if (props.show) {
-      document.querySelector('html').style.overflowY = 'hidden'
-    } else {
-      document.querySelector('html').style.overflowY = 'auto'
-    }
-  }, [props.show])
+  const hideOverflow = () => {
+    document.querySelector('body').style.overflowY = 'hidden'
+    document.querySelector('#modal-backdrop').style.overflowY = 'auto'
+  }
+
+  const showOverflow = () => {
+    document.querySelector('body').style.overflowY = 'auto'
+    document.querySelector('#modal-backdrop').style.overflowY = 'hidden'
+  }
 
   return (
     <CSSTransition
@@ -19,6 +21,8 @@ export default function Modal(props) {
       classNames="modal"
       in={props.show}
       unmountOnExit
+      onEntered={hideOverflow}
+      onExiting={showOverflow}
     >
       <StyledModal
         onClick={e =>
