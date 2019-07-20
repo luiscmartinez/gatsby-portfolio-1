@@ -27,11 +27,11 @@ function SEO({ description, lang, meta, title, img }) {
 
   const metaDescription = description || site.siteMetadata.description
 
-  const rootUrl = () => {
-    if (typeof window !== 'undefined') {
-      return `${window.location.protocol}//${window.location.host}`
-    }
-  }
+  // const rootUrl = () => {
+  //   if (typeof window !== 'undefined') {
+  //     return `${window.location.protocol}//${window.location.host}`
+  //   }
+  // }
 
   return (
     <Helmet
@@ -76,7 +76,11 @@ function SEO({ description, lang, meta, title, img }) {
         },
         {
           property: `og:image`,
-          content: `${rootUrl()}${img}`,
+          content: `http://www.riley.gg${img}`,
+        },
+        {
+          property: `og:image:secure_url`,
+          content: `https://riley.gg${img}`,
         },
         {
           property: `og:url`,
