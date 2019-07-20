@@ -36,8 +36,12 @@ export default function Modal(props) {
           <div className="modal content">
             <h4>{title}</h4>
             <p>{body}</p>
-            <a href={siteLink}>Visit Site</a>
-            <a href={codeLink}>View Code</a>
+            <a href={siteLink} rel="noopener noreferrer" target="_blank">
+              Visit Site
+            </a>
+            <a href={codeLink} rel="noopener noreferrer" target="_blank">
+              View Code
+            </a>
           </div>
         </div>
       </StyledModal>
