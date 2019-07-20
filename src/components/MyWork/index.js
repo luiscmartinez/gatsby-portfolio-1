@@ -24,7 +24,7 @@ export default function MyWork() {
       title: 'UpWork Freelance Work',
       body:
         'Website for a client featuring custom hover animations, and custom image carousel using HTML 5 data attributes. Design provided by client.',
-      siteLink: 'https://riley.gg/upwork-10/case-study.html',
+      siteLink: 'https://darren.riley.gg/case-study',
       codeLink: 'https://github.com/Riley-Brown/upwork-10',
     },
     {
@@ -40,14 +40,14 @@ export default function MyWork() {
       body:
         'Personal website built for a client. The awesome design was provided by the client, I just put it all together. Built using Bootstrap.',
       codeLink: 'https://github.com/Riley-Brown/upwork-4',
-      siteLink: 'https://riley.gg/upwork-4/',
+      siteLink: 'https://daniel.riley.gg/',
     },
     {
       img: wbFlashback,
       title: 'WB Flashback',
       body:
         'Website built to showcase the changes in Brooklyn, New York, over many years. Includes amazing cross-fade, and split image before and after effects. Built using CSS, and JavaScript.',
-      siteLink: 'https://riley.gg/upwork-3/',
+      siteLink: 'https://wb-flashback.riley.gg/',
       codeLink: 'https://github.com/Riley-Brown/upwork-3',
     },
     {
@@ -55,7 +55,7 @@ export default function MyWork() {
       title: 'Bay Shells Landing Page',
       body:
         'Beautiful modern design provided by the client, includes dynamic clickable tabs, and slick carousel. Built using vanilla CSS and jQuery.',
-      siteLink: 'https://riley.gg/upwork-7/',
+      siteLink: 'https://bayshells.riley.gg/',
       codeLink: 'https://github.com/Riley-Brown/bayshells-landing',
     },
   ])
