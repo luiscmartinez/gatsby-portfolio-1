@@ -27,6 +27,12 @@ function SEO({ description, lang, meta, title, img }) {
 
   const metaDescription = description || site.siteMetadata.description
 
+  const rootUrl = () => {
+    if (typeof window !== 'undefined') {
+      return `${window.location.protocol}//${window.location.host}`
+    }
+  }
+
   return (
     <Helmet
       htmlAttributes={{
@@ -70,7 +76,7 @@ function SEO({ description, lang, meta, title, img }) {
         },
         {
           property: `og:image`,
-          content: `https://Riley.gg${img}`,
+          content: `${rootUrl()}${img}`,
         },
         {
           property: `og:url`,
