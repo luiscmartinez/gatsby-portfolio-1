@@ -1,12 +1,28 @@
 import React from 'react'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { CSSTransition } from 'react-transition-group'
+import { Link } from 'react-scroll'
 import { StyledMobileNavbar } from './StyledMobileNavbar'
 
 export default function MobileNavbar({ menuOpen, toggle }) {
+  const hideOverflow = () => {
+    document.querySelector('#mobile-navbar').style.overflow = 'auto'
+    document.querySelector('body').style.overflow = 'hidden'
+  }
+  const showOverflow = () => {
+    document.querySelector('#mobile-navbar').style.overflow = 'hidden'
+    document.querySelector('body').style.overflow = 'auto'
+  }
+
   return (
-    <CSSTransition in={menuOpen} classNames="modal" unmountOnExit timeout={300}>
-      <StyledMobileNavbar onClick={toggle}>
+    <CSSTransition
+      in={menuOpen}
+      classNames="modal"
+      unmountOnExit
+      timeout={300}
+      onEntered={hideOverflow}
+      onExiting={showOverflow}
+    >
+      <StyledMobileNavbar onClick={toggle} id="mobile-navbar">
         <ul>
           <li onClick={toggle}>
             <Link
