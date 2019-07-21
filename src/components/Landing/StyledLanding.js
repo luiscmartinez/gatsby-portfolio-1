@@ -13,6 +13,10 @@ export const StyledLanding = styled.div`
   background-position: center;
   background-size: cover;
   display: flex;
+  background-attachment: fixed;
+  @media (max-width: 800px) {
+    background-attachment: initial;
+  }
 
   .container {
     display: flex;
