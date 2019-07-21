@@ -17,28 +17,36 @@ export default function GitHub() {
   }, [])
 
   return (
-    <StyledGitHub>
-      <h2 className="title">My Latest Repos</h2>
-      <hr />
-      <div className="cards">
-        {latestRepos.map(repo => (
-          <Fade cascade key={repo.id}>
-            <div className="card">
-              <h2>{repo.name}</h2>
-              {repo.description && <p>{repo.description}</p>}
-              <button style={{ background: 'var(--primary)' }}>
-                Stars: {repo.stargazers_count}
-              </button>
-              <button style={{ background: '#6c757d' }}>
-                Watchers: {repo.watchers_count}
-              </button>
-              <button style={{ background: '#007bff' }}>
-                Forks: {repo.forks}
-              </button>
-            </div>
-          </Fade>
-        ))}
-      </div>
-    </StyledGitHub>
+    latestRepos.length > 0 && (
+      <StyledGitHub>
+        <h2 className="title">My Latest Repos</h2>
+        <hr />
+        <div className="cards">
+          {latestRepos.map(repo => (
+            <Fade cascade key={repo.id}>
+              <div className="card">
+                <a
+                  href={repo.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h2>{repo.name}</h2>
+                  {repo.description && <p>{repo.description}</p>}
+                  <span style={{ background: 'var(--primary)' }}>
+                    Stars: {repo.stargazers_count}
+                  </span>
+                  <span style={{ background: '#6c757d' }}>
+                    Watchers: {repo.watchers_count}
+                  </span>
+                  <span style={{ background: '#007bff' }}>
+                    Forks: {repo.forks}
+                  </span>
+                </a>
+              </div>
+            </Fade>
+          ))}
+        </div>
+      </StyledGitHub>
+    )
   )
 }
