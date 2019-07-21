@@ -5,12 +5,12 @@ import { StyledMobileNavbar } from './StyledMobileNavbar'
 
 export default function MobileNavbar({ menuOpen, toggle }) {
   const hideOverflow = () => {
-    document.querySelector('#mobile-navbar').style.overflow = 'auto'
-    document.querySelector('body').style.overflow = 'hidden'
+    document.querySelector('#mobile-navbar').style.overflowY = 'auto'
+    document.querySelector('body').style.overflowY = 'hidden'
   }
   const showOverflow = () => {
-    document.querySelector('#mobile-navbar').style.overflow = 'hidden'
-    document.querySelector('body').style.overflow = 'auto'
+    document.querySelector('#mobile-navbar').style.overflowY = 'hidden'
+    document.querySelector('body').style.overflowY = 'auto'
   }
 
   return (
