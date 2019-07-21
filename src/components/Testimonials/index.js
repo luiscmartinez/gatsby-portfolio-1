@@ -3,7 +3,6 @@ import { StyledTestimonials } from './StyledTestimonials'
 import Testimonial from './Testimonial'
 import rightAngle from '../../svg/right.svg'
 import leftAngle from '../../svg/left.svg'
-import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 export default class Testimonials extends Component {
   state = {
@@ -34,11 +33,12 @@ export default class Testimonials extends Component {
     height: '',
     paused: false,
     visible: false,
+    length: null,
   }
 
   componentDidMount() {
     const interval = setInterval(this.cycle, 4000)
-    this.setState({ interval: interval })
+    this.setState({ interval, length: this.state.testimonials.length })
 
     if (this.state.paused || this.state.visible) {
       clearInterval(interval)
@@ -95,11 +95,25 @@ export default class Testimonials extends Component {
   }
 
   render() {
-    const { index, testimonials, height } = this.state
+    const { index, testimonials, height, length } = this.state
+
+    let indexControls = []
+
+    for (let i = 0; i < length; i++) {
+      indexControls.push(
+        <div>
+          <button
+            className="index-control"
+            data-index={`${i}`}
+            data-active={i === index ? 'true' : null}
+          />
+        </div>
+      )
+    }
 
     return (
       <StyledTestimonials
-        style={{ height: `${height}px`, transition: '200ms ease-in' }}
+        style={{ height: `${height + 40}px`, transition: '200ms ease-in' }}
         onMouseEnter={() => this.setState({ paused: true })}
         onMouseLeave={() => this.setState({ paused: false })}
         ref={el => (this.testimonial = el)}
@@ -143,6 +157,7 @@ export default class Testimonials extends Component {
         >
           <img src={rightAngle} />
         </span>
+        <div className="index-container">{indexControls}</div>
       </StyledTestimonials>
     )
   }
