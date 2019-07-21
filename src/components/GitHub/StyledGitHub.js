@@ -26,6 +26,14 @@ export const StyledGitHub = styled.div`
     text-align: center;
     flex: 0 0 45%;
     margin-bottom: 50px;
+    transition: 200ms;
+    &:hover {
+      transform: translateY(-10px);
+    }
+    a {
+      text-decoration: none;
+      color: #222;
+    }
     @media (max-width: 850px) {
       flex: 0 0 100%;
     }
@@ -39,7 +47,7 @@ export const StyledGitHub = styled.div`
       margin: auto;
       margin-bottom: 20px;
     }
-    button {
+    span {
       display: block;
       border: none;
       outline: none;
