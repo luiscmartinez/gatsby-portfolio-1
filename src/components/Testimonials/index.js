@@ -52,6 +52,15 @@ export default class Testimonials extends Component {
     window.addEventListener('scroll', this.isVisible)
   }
 
+  // update height state if click to next slide
+  componentDidUpdate(prevProps, prevState) {
+    let height = document.querySelector('.testimonial').clientHeight
+    if (height != prevState.height) {
+      this.setState({ height })
+    }
+  }
+
+  // cycle testimonial carousel
   cycle = () => {
     const { index, testimonials, visible, paused } = this.state
 
@@ -68,9 +77,6 @@ export default class Testimonials extends Component {
         })
       }
     }
-
-    let height = document.querySelector('.testimonial').clientHeight
-    this.setState({ height })
   }
 
   isVisible = () => {
@@ -81,16 +87,46 @@ export default class Testimonials extends Component {
 
     if (!visible) {
       this.setState({ visible: false })
+      window.removeEventListener('keydown', this.arrowKeys)
     } else if (visible) {
       this.setState({ visible: true })
+      window.addEventListener('keydown', this.arrowKeys)
     }
   }
 
-  // update height state if click to next slide
-  componentDidUpdate(prevProps, prevState) {
-    let height = document.querySelector('.testimonial').clientHeight
-    if (height != prevState.height) {
-      this.setState({ height })
+  // clear and reset interval
+  resetInterval = () => {
+    clearInterval(this.state.interval)
+    const interval = setInterval(this.cycle, 4000)
+    this.setState({ interval })
+  }
+
+  // cycle testimonial carousel with arrow keys
+  arrowKeys = e => {
+    if (e.key === 'ArrowRight' || e.keyCode === 39) {
+      this.next()
+      this.resetInterval()
+    } else if (e.key === 'ArrowLeft' || e.keyCode === 37) {
+      this.previous()
+      this.resetInterval()
+    }
+  }
+
+  next = () => {
+    const { index, testimonials } = this.state
+    if (index >= testimonials.length - 1) {
+      this.setState({ index: 0 })
+    } else {
+      this.setState({ index: index + 1 })
+    }
+  }
+
+  previous = () => {
+    const { index, testimonials } = this.state
+    if (index === 0) {
+      this.setState({ index: testimonials.length - 1 })
+    } else {
+      this.setState({ index: index - 1 })
     }
   }
 
@@ -101,7 +137,12 @@ export default class Testimonials extends Component {
 
     for (let i = 0; i < length; i++) {
       indexControls.push(
-        <div>
+        <div
+          onClick={() => {
+            this.setState({ index: i })
+            this.resetInterval()
+          }}
+        >
           <button
             className="index-control"
             data-index={`${i}`}
@@ -125,36 +166,10 @@ export default class Testimonials extends Component {
           index={index}
         />
         {/* carousel controls */}
-        <span
-          className="carousel-left"
-          onClick={() => {
-            if (index === 0) {
-              this.setState({ index: testimonials.length - 1 })
-              let height = document.querySelector('.testimonial').clientHeight
-              this.setState({ height })
-            } else {
-              this.setState({ index: index - 1 })
-              let height = document.querySelector('.testimonial').clientHeight
-              this.setState({ height })
-            }
-          }}
-        >
+        <span className="carousel-left" onClick={this.previous}>
           <img src={leftAngle} />
         </span>
-        <span
-          className="carousel-right"
-          onClick={() => {
-            if (index >= testimonials.length - 1) {
-              this.setState({ index: 0 })
-              let height = document.querySelector('.testimonial').clientHeight
-              this.setState({ height })
-            } else {
-              this.setState({ index: index + 1 })
-              let height = document.querySelector('.testimonial').clientHeight
-              this.setState({ height })
-            }
-          }}
-        >
+        <span className="carousel-right" onClick={this.next}>
           <img src={rightAngle} />
         </span>
         <div className="index-container">{indexControls}</div>
