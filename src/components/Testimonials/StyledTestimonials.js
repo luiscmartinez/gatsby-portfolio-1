@@ -120,4 +120,36 @@ export const StyledTestimonials = styled.div`
       transform: translateX(15px);
     }
   }
+  .index-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    div {
+      padding: 15px 0;
+      opacity: 0.8;
+      transition: 200ms;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+        .index-control {
+          transform: translateY(-2px);
+        }
+      }
+    }
+    .index-control {
+      cursor: pointer;
+      margin: 0 7px;
+      background: var(--primary);
+      border: none;
+      width: 40px;
+      height: 5px;
+      outline: none;
+      transition: 200ms;
+    }
+    [data-active='true'] {
+      background: #444;
+    }
+  }
 `
