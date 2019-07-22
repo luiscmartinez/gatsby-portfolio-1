@@ -138,6 +138,7 @@ export default class Testimonials extends Component {
     for (let i = 0; i < length; i++) {
       indexControls.push(
         <div
+          key={i}
           onClick={() => {
             this.setState({ index: i })
             this.resetInterval()
