@@ -11,7 +11,7 @@ export const useIsVisible = element => {
 
       return () => window.removeEventListener('scroll', isVisible)
     }
-  })
+  }, [element])
 
   // check element rect top
   const isVisible = () => {
