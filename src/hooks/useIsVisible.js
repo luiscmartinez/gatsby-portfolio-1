@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react'
 
 export const useIsVisible = ({ element, defaultVisible }) => {
   const [visible, setVisible] = useState(defaultVisible)
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight)
+  const [windowHeight, setWindowHeight] = useState(
+    window ? window.innerHeight : null
+  )
 
   useEffect(() => {
     if (element.current) {
