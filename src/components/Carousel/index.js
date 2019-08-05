@@ -9,7 +9,12 @@ import { useCarousel } from '../../hooks/useCarousel'
 export default function Carousel() {
   const [images, setImages] = useState([bayshells, caseStudy, learnLocker])
   const carouselContainer = useRef()
-  const [index] = useCarousel(images, 2000, carouselContainer)
+  const [index] = useCarousel({
+    data: images,
+    timeout: 2000,
+    element: carouselContainer,
+    defaultVisible: true,
+  })
 
   return (
     <StyledCarousel ref={carouselContainer}>
