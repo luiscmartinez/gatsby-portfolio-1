@@ -1,13 +1,46 @@
 import React, { Component, useState, useEffect, useRef } from 'react'
-import bayshells from '../../images/bayshells-landing.jpg'
-import caseStudy from '../../images/upwork-10-case-study.jpg'
-import learnLocker from '../../images/learn-locker.jpg'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { StyledCarousel } from './StyledCarousel'
-import { useCarousel } from '../../hooks/useCarousel'
+import { useCarousel } from 'hooks/useCarousel'
 
 export default function Carousel() {
-  const [images, setImages] = useState([bayshells, caseStudy, learnLocker])
+  const imageData = useStaticQuery(graphql`
+    query LandingCarouselQuery {
+      allImageSharp {
+        edges {
+          node {
+            fluid {
+              ...GatsbyImageSharpFluid
+              originalName
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const imageNames = [
+    'rawberri-categories.jpg',
+    'rawberri-items.png',
+    'bayshells-landing.jpg',
+    'upwork-10-case-study.jpg',
+    'learn-locker.png',
+    'learn-locker-logged-in.png',
+  ]
+
+  const images = imageData.allImageSharp.edges
+    .filter(edge => {
+      for (let i = 0; i < imageNames.length; i++) {
+        if (edge.node.fluid.originalName === imageNames[i]) {
+          return edge
+        }
+      }
+    })
+    .reverse()
+
   const carouselContainer = useRef()
   const [index] = useCarousel({
     data: images,
@@ -25,7 +58,9 @@ export default function Carousel() {
           key={index}
           appear={true}
         >
-          <img src={images[index]} alt="" className="carousel-img" />
+          <div className="img-wrapper">
+            <Img fluid={images[index].node.fluid} />
+          </div>
         </CSSTransition>
       </TransitionGroup>
     </StyledCarousel>
