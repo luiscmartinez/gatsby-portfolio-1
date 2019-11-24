@@ -7,6 +7,9 @@ export const StyledCarousel = styled.div`
     right: 0;
     left: 0;
     bottom: 0;
+    @media (max-width: 900px) {
+      top: 50px;
+    }
   }
   .carousel-img,
   .gatsby-image-wrapper {
@@ -15,8 +18,5 @@ export const StyledCarousel = styled.div`
     height: 100%;
     max-height: 330px;
     will-change: contents;
-    @media (max-width: 1230px) {
-      /* max-height: initial; */
-    }
   }
 `

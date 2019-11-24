@@ -91,9 +91,6 @@ export const StyledLanding = styled.div`
       @media (max-width: 1100px) {
         flex: 0 0 70%;
       }
-      @media (max-width: 900px) {
-        height: 250px;
-      }
       @media (max-width: 600px) {
         flex: 0 0 90%;
       }
@@ -105,6 +102,10 @@ export const StyledLanding = styled.div`
       img {
         width: 100%;
         margin-bottom: -7px;
+        height: 70px;
+        @media (max-width: 900px) {
+          height: 50px;
+        }
       }
     }
     .landing-info {
