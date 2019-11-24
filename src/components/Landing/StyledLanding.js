@@ -47,7 +47,7 @@ export const StyledLanding = styled.div`
     p {
       color: #b9c7cf;
       font-size: 2rem;
-      max-width: 550px;
+      max-width: 510px;
       margin: auto;
       text-align: center;
       line-height: 1.4;
