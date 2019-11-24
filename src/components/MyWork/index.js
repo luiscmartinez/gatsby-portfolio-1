@@ -12,7 +12,7 @@ import caseStudy from 'images/upwork-10-case-study.jpg'
 import wbFlashback from 'images/wb-flashback.jpg'
 
 export default function MyWork() {
-  const [data] = useState([
+  const data = [
     {
       img: learnLocker,
       title: 'Learn Locker',
@@ -61,7 +61,7 @@ export default function MyWork() {
       siteLink: 'https://bayshells.riley.gg/',
       codeLink: 'https://github.com/Riley-Brown/bayshells-landing',
     },
-  ])
+  ]
 
   const [show, setShow] = useState(false)
   const [index, setIndex] = useState(0)
