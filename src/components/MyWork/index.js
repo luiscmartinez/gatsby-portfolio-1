@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
-import bayshells from '../../images/bayshells-landing.jpg'
-import danielLanding from '../../images/daniel-landing-page.jpg'
-import instaClone from '../../images/insta-clone.jpg'
-import learnLocker from '../../images/learn-locker.jpg'
-import caseStudy from '../../images/upwork-10-case-study.jpg'
-import wbFlashback from '../../images/wb-flashback.jpg'
+
 import { StyledMyWork } from './StyledMyWork'
 import Card from './Card'
 import Modal from './Modal'
+
+import bayshells from 'images/bayshells-landing.jpg'
+import danielLanding from 'images/daniel-landing-page.jpg'
+import rawberri from 'images/rawberri-items.png'
+import learnLocker from 'images/learn-locker.png'
+import caseStudy from 'images/upwork-10-case-study.jpg'
+import wbFlashback from 'images/wb-flashback.jpg'
 
 export default function MyWork() {
   const [data] = useState([
@@ -28,11 +30,12 @@ export default function MyWork() {
       codeLink: 'https://github.com/Riley-Brown/upwork-10',
     },
     {
-      img: instaClone,
-      title: 'Insta Clone React App',
-      body: 'Insta Clone React App',
-      siteLink: 'https://riley.gg/lambda/insta-clone/',
-      codeLink: 'https://github.com/Riley-Brown/React-Insta-Clone',
+      img: rawberri,
+      title: 'Rawberri Order Builder',
+      body:
+        'Freelance work developing online ordering platform for restaurant. Uses AWS lambda functions for ordering confirmations.',
+      siteLink: 'https://loving-kilby-fc3f0a.netlify.com/',
+      codeLink: 'https://github.com/Riley-Brown/gatsby-online-food-orders',
     },
     {
       img: danielLanding,
