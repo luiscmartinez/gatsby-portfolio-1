@@ -8,9 +8,7 @@ export default function GitHub() {
 
   useEffect(() => {
     const repos = async () => {
-      const data = await axios.get(
-        'https://supersystem-mailchimp-api.herokuapp.com/github'
-      )
+      const data = await axios.get('https://invent-mcs.begin.app/repos')
       setLatestRepos(data.data)
     }
     repos()
