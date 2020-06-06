@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledSkills = styled.div`
-  padding: 50px 0;
+  padding-top: 50px;
   @media (max-width: 600px) {
     padding-bottom: 2rem;
   }
