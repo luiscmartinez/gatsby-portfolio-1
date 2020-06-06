@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 export const StyledAbout = styled.div`
+  padding: 50px 0;
+  @media (max-width: 600px) {
+    padding: 40px 0;
+  }
   .container {
-    padding: 100px 0;
     max-width: 1400px;
     margin: auto;
     display: flex;
@@ -11,12 +14,6 @@ export const StyledAbout = styled.div`
     width: 90%;
     @media (max-width: 1150px) {
       justify-content: center;
-    }
-    @media (max-width: 900px) {
-      padding: 70px 0;
-    }
-    @media (max-width: 600px) {
-      padding: 40px 0;
     }
     .about {
       flex: 0 0 50%;
