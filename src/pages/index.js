@@ -16,9 +16,9 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Riley Brown Web Developer | Portfolio" img={metadataLanding} />
     <Landing />
-    <Skills />
     <Testimonials />
     <MyWork />
+    <Skills />
     <About />
     <GitHub />
   </Layout>
