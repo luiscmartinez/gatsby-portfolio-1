@@ -34,11 +34,10 @@ export default function Landing() {
                 <h1>Welcome to my Portfolio</h1>
                 <p>
                   I am a Full-Stack Web Developer with a passion for learning
-                  new technologies. I am experienced with modern tech such as
-                  React and Nodejs.
+                  new technologies.
                 </p>
-                <Link to="test" smooth={true} duration={500} offset={-50}>
-                  <button>See More</button>
+                <Link to="my-work" smooth={true} duration={500} offset={-100}>
+                  <button>My Work</button>
                 </Link>
               </div>
             </div>

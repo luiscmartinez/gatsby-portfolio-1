@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import landing from '../../images/landing.jpg'
-import { transitionClasses } from '../../helpers/transitionClasses'
+import landing from 'images/landing.jpg'
+import { transitionClasses } from 'helpers/transitionClasses'
 
 export const StyledLanding = styled.div`
   ${transitionClasses('fade', 1000)};
