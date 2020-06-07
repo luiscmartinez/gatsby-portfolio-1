@@ -80,12 +80,11 @@ export default function MyWork() {
       <div className="cards">
         {data.map((item, index) => (
           <Card
+            activeModalImg={activeModalImg}
+            key={item.img}
             img={item.img}
             index={index}
-            alt="My Work"
-            key={item.img}
-            activeModalImg={activeModalImg}
-            toggleModal={toggleModal}
+            title={item.title}
           />
         ))}
       </div>

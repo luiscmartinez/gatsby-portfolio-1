@@ -11,12 +11,24 @@ export const StyledMyWork = styled.div`
     flex-wrap: wrap;
   }
   .card {
+    padding: 0;
+    border: none;
+    outline: none;
     width: 360px;
     height: 220px;
     margin: auto;
     margin-bottom: 40px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.23);
     border-radius: 12px;
+    &:active,
+    &:focus,
+    &:hover {
+      img {
+        transform: scale(1.05);
+        transition: 150ms ease-in;
+        box-shadow: 0 0 0 1px #000;
+      }
+    }
     @media (max-width: 1300px) {
       width: 45%;
       height: 270px;
@@ -34,7 +46,7 @@ export const StyledMyWork = styled.div`
       display: block;
       transition: 150ms ease-out;
       &:hover {
-        transform: scale(1.02);
+        transform: scale(1.05);
         transition: 150ms ease-in;
       }
       @media (max-width: 1300px) {

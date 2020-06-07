@@ -2,19 +2,18 @@ import React from 'react'
 import Fade from 'react-reveal/Fade'
 import LazyLoad from 'react-lazy-load'
 
-export default function Card({ img, activeModalImg, index }) {
-  const key = Math.random()
+export default function Card({ img, activeModalImg, index, title }) {
   return (
     <Fade>
-      <div className="card">
+      <button
+        className="card"
+        aria-label={`View ${title} image`}
+        onClick={() => activeModalImg(index)}
+      >
         <LazyLoad offsetVertical={500} debounce={false}>
-          <img
-            src={img}
-            alt="my super cool projects... very cool... cool stuff"
-            onClick={() => activeModalImg(index)}
-          />
+          <img src={img} alt={title} />
         </LazyLoad>
-      </div>
+      </button>
     </Fade>
   )
 }
