@@ -55,8 +55,9 @@ export const StyledModal = styled.div`
         width: 100%;
       }
     }
-    span {
+    .close-modal-btn {
       position: absolute;
+      border: none;
       top: 0;
       color: red;
       font-size: 6rem;
