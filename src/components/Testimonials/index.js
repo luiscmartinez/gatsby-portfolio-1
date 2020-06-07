@@ -51,6 +51,7 @@ export default function Testimonials() {
       <div key={i} onClick={() => indexClick(i)}>
         <button
           className="index-control"
+          aria-label="Select testimonial"
           data-index={`${i}`}
           data-active={i === index ? 'true' : null}
         />
@@ -73,12 +74,12 @@ export default function Testimonials() {
       />
 
       {/* carousel controls */}
-      <span className="carousel-left" onClick={previous}>
+      <button className="carousel-left" onClick={previous}>
         <img src={leftAngle} />
-      </span>
-      <span className="carousel-right" onClick={next}>
+      </button>
+      <button className="carousel-right" onClick={next}>
         <img src={rightAngle} />
-      </span>
+      </button>
       <div className="index-container">{indexControls}</div>
     </StyledTestimonials>
   )

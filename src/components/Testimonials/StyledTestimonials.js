@@ -4,7 +4,7 @@ import { transitionClasses } from '../../helpers/transitionClasses'
 export const StyledTestimonials = styled.div`
   ${transitionClasses('testimonial', 400)};
   max-width: 700px;
-  margin: auto;
+  margin: 50px auto 20px;
   text-align: center;
   width: 90%;
   position: relative;
@@ -62,6 +62,7 @@ export const StyledTestimonials = styled.div`
     height: 150px;
     display: flex;
     align-items: center;
+    border: none;
     &:hover {
       opacity: 1;
       transition: 200ms ease-in;
@@ -147,6 +148,11 @@ export const StyledTestimonials = styled.div`
       height: 5px;
       outline: none;
       transition: 200ms;
+      &:active,
+      &:focus {
+        box-shadow: 0 0 0 1px #222;
+        transform: translateY(-2px);
+      }
     }
     [data-active='true'] {
       background: #444;
