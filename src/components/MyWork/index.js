@@ -71,9 +71,7 @@ export default function MyWork() {
     toggleModal()
   }
 
-  const toggleModal = () => {
-    setShow(!show)
-  }
+  const toggleModal = () => setShow(!show)
 
   return (
     <StyledMyWork>
@@ -88,7 +86,14 @@ export default function MyWork() {
           />
         ))}
       </div>
-      <Modal data={data[index]} toggleModal={toggleModal} show={show} />
+      <Modal
+        data={data[index]}
+        setIndex={setIndex}
+        toggleModal={toggleModal}
+        show={show}
+        index={index}
+        dataLength={data.length}
+      />
     </StyledMyWork>
   )
 }
