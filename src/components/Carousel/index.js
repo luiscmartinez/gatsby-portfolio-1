@@ -1,6 +1,6 @@
-import React, { Component, useState, useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { StyledCarousel } from './StyledCarousel'
@@ -12,6 +12,7 @@ export default function Carousel() {
       allImageSharp {
         edges {
           node {
+            gatsbyImageData(placeholder: BLURRED, height: 330)
             fluid {
               ...GatsbyImageSharpFluid
               originalName
@@ -59,7 +60,7 @@ export default function Carousel() {
           appear={true}
         >
           <div className="img-wrapper">
-            <Img fluid={images[index].node.fluid} />
+            <GatsbyImage image={images[index].node.gatsbyImageData} />
           </div>
         </CSSTransition>
       </TransitionGroup>

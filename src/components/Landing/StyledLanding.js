@@ -99,7 +99,7 @@ export const StyledLanding = styled.div`
         display: none;
       }
 
-      img {
+      img.carousel-frame {
         width: 100%;
         margin-bottom: -7px;
         height: 70px;

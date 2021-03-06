@@ -8,8 +8,12 @@ export default function GitHub() {
 
   useEffect(() => {
     const repos = async () => {
-      const getRepos = await axios.get('https://invent-mcs.begin.app/repos')
-      setLatestRepos(getRepos.data.reposJson)
+      try {
+        const { data } = await axios.get('https://invent-mcs.begin.app/repos')
+        setLatestRepos(data.reposJson)
+      } catch (err) {
+        console.log(err)
+      }
     }
     repos()
   }, [])

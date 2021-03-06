@@ -27,7 +27,11 @@ export default function Landing() {
           >
             <div className="container">
               <div className="carousel-wrapper">
-                <img src={browser} alt="Carousel frame" />
+                <img
+                  className="carousel-frame"
+                  src={browser}
+                  alt="Carousel frame"
+                />
                 <Carousel />
               </div>
               <div className="landing-info">

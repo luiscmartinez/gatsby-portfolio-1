@@ -14,7 +14,6 @@ export const StyledCarousel = styled.div`
   .carousel-img,
   .gatsby-image-wrapper {
     position: absolute;
-    border: 2px solid #fff;
     height: 100%;
     max-height: 330px;
     will-change: contents;
