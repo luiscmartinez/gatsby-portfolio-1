@@ -1,8 +1,9 @@
+const author = 'Luis Martinez'
 module.exports = {
   siteMetadata: {
-    title: ``,
-    description: `Riley Brown Web Development Portfolio. Showcasing freelance and side project work. Tech stack includes vanilla JS, React, and Node.js`,
-    author: `Riley Brown`,
+    title: `${author} Web Developer | Portfolio`,
+    description: `${author} Web Development Portfolio. Showcasing freelance and side project work. Tech stack includes vanilla JS, React, and Node.js`,
+    author,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

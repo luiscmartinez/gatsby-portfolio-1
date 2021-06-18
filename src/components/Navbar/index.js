@@ -3,6 +3,7 @@ import { StyledNavbar } from './StyledNavbar'
 import { Link, animateScroll as scroll } from 'react-scroll'
 import menuIcon from '../../images/menu.svg'
 import MobileNavbar from './MobileNavbar'
+import gatsbyConfig from '../../../gatsby-config'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -16,7 +17,7 @@ export default function Navbar() {
       <ul className="navbar-content">
         <li className="site-title">
           <h1 onClick={() => scroll.scrollToTop({ duration: 500 })}>
-            Riley Brown
+            {gatsbyConfig.siteMetadata.author}
           </h1>
         </li>
         <div>
