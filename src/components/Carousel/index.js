@@ -25,11 +25,12 @@ export default function Carousel() {
 
   const imageNames = [
     'rawberri-categories.jpg',
-    'rawberri-items.png',
+    'rawberri-items.jpg',
+    'doge-flip.jpg',
     'bayshells-landing.jpg',
     'upwork-10-case-study.jpg',
-    'learn-locker.png',
-    'learn-locker-logged-in.png',
+    'learn-locker.jpg',
+    'learn-locker-logged-in.jpg',
   ]
 
   const images = imageData.allImageSharp.edges
