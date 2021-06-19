@@ -5,13 +5,29 @@ import Card from './Card'
 import Modal from './Modal'
 
 import bayshells from 'images/bayshells-landing.jpg'
-import danielLanding from 'images/daniel-landing-page.jpg'
-import rawberri from 'images/rawberri-items.png'
-import learnLocker from 'images/learn-locker.png'
+import dogeFlip from 'images/doge-flip.jpg'
+import rawberri from 'images/rawberri-items.jpg'
+import learnLocker from 'images/learn-locker.jpg'
 import caseStudy from 'images/upwork-10-case-study.jpg'
 import wbFlashback from 'images/wb-flashback.jpg'
 
 const data = [
+  {
+    img: rawberri,
+    title: 'Rawberri Order Builder',
+    body:
+      'Freelance work developing online ordering platform for restaurant. Built using Gatsby.js, MongoDB and Netlify serverless functions',
+    siteLink: 'https://loving-kilby-fc3f0a.netlify.com/',
+    codeLink: 'https://github.com/Riley-Brown/gatsby-online-food-orders',
+  },
+  {
+    img: dogeFlip,
+    title: 'Dogecoin Coin Flip',
+    body:
+      'Dogecoin peer-to-peer coin flip game. Real-time UI events for all connected users. Real-time deposits and withdraws using doge blockchain websocket. Built using React, TypeScript, Express, and MongoDB',
+    codeLink: 'https://github.com/Riley-Brown/doge-flip',
+    siteLink: 'https://doge-flip.riley.gg/',
+  },
   {
     img: learnLocker,
     title: 'Learn Locker',
@@ -27,22 +43,6 @@ const data = [
       'Website for a client featuring custom hover animations, and custom image carousel using HTML 5 data attributes. Design provided by client.',
     siteLink: 'https://darren.riley.gg/case-study',
     codeLink: 'https://github.com/Riley-Brown/upwork-10',
-  },
-  {
-    img: rawberri,
-    title: 'Rawberri Order Builder',
-    body:
-      'Freelance work developing online ordering platform for restaurant. Uses AWS lambda functions for ordering confirmations.',
-    siteLink: 'https://loving-kilby-fc3f0a.netlify.com/',
-    codeLink: 'https://github.com/Riley-Brown/gatsby-online-food-orders',
-  },
-  {
-    img: danielLanding,
-    title: 'Daniel D Website',
-    body:
-      'Personal website built for a client. The awesome design was provided by the client, I just put it all together. Built using Bootstrap.',
-    codeLink: 'https://github.com/Riley-Brown/upwork-4',
-    siteLink: 'https://daniel.riley.gg/',
   },
   {
     img: wbFlashback,
