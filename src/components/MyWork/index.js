@@ -10,6 +10,8 @@ import rawberri from 'images/rawberri-items.png'
 import learnLocker from 'images/learn-locker.png'
 import caseStudy from 'images/upwork-10-case-study.jpg'
 import wbFlashback from 'images/wb-flashback.jpg'
+import pepesMexicanFoodImg from 'images/pepe-mexican-food.png'
+import dataTonicImg from 'images/datatonic.png'
 
 const data = [
   {
@@ -21,45 +23,22 @@ const data = [
     codeLink: 'https://github.com/learneda',
   },
   {
-    img: caseStudy,
-    title: 'UpWork Freelance Work',
+    img: pepesMexicanFoodImg,
+    title: "Original Pepe's Mexican Food ",
     body:
-      'Website for a client featuring custom hover animations, and custom image carousel using HTML 5 data attributes. Design provided by client.',
-    siteLink: 'https://darren.riley.gg/case-study',
-    codeLink: 'https://github.com/Riley-Brown/upwork-10',
+      "Refactor client's multiple html page website into a single page application.",
+    siteLink: 'https://original-pepes.netlify.app',
+    codeLink: 'https://github.com/luiscmartinez/originalpepes',
   },
   {
-    img: rawberri,
-    title: 'Rawberri Order Builder',
+    img: dataTonicImg,
+    title: 'Data Tonic',
     body:
-      'Freelance work developing online ordering platform for restaurant. Uses AWS lambda functions for ordering confirmations.',
-    siteLink: 'https://loving-kilby-fc3f0a.netlify.com/',
-    codeLink: 'https://github.com/Riley-Brown/gatsby-online-food-orders',
+      'A Take-Home Project assignment for Prism Studios.',
+    siteLink: 'https://datatonic.netlify.app/dashboard',
+    codeLink: 'https://github.com/luiscmartinez/datatonic-fe',
   },
-  {
-    img: danielLanding,
-    title: 'Daniel D Website',
-    body:
-      'Personal website built for a client. The awesome design was provided by the client, I just put it all together. Built using Bootstrap.',
-    codeLink: 'https://github.com/Riley-Brown/upwork-4',
-    siteLink: 'https://daniel.riley.gg/',
-  },
-  {
-    img: wbFlashback,
-    title: 'WB Flashback',
-    body:
-      'Website built to showcase the changes in Brooklyn, New York, over many years. Includes amazing cross-fade, and split image before and after effects. Built using CSS, and JavaScript.',
-    siteLink: 'https://wb-flashback.riley.gg/',
-    codeLink: 'https://github.com/Riley-Brown/upwork-3',
-  },
-  {
-    img: bayshells,
-    title: 'Bay Shells Landing Page',
-    body:
-      'Beautiful modern design provided by the client, includes dynamic clickable tabs, and slick carousel. Built using vanilla CSS and jQuery.',
-    siteLink: 'https://bayshells.riley.gg/',
-    codeLink: 'https://github.com/Riley-Brown/bayshells-landing',
-  },
+  
 ]
 
 export default function MyWork() {

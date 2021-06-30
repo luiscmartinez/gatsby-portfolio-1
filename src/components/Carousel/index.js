@@ -24,10 +24,8 @@ export default function Carousel() {
   `)
 
   const imageNames = [
-    'rawberri-categories.jpg',
-    'rawberri-items.png',
-    'bayshells-landing.jpg',
-    'upwork-10-case-study.jpg',
+    'datatonic-2.png',
+    'pepe-mexican-food-2.png',
     'learn-locker.png',
     'learn-locker-logged-in.png',
   ]
