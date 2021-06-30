@@ -3,7 +3,7 @@
   "private": true,
   "description": "Web dev portfolio",
   "version": "1.0.0",
-  "author": "Riley.gg",
+  "author": "Riley.gg + luismartinez.dev",
   "dependencies": {
     "axios": "^0.19.0",
     "babel-plugin-styled-components": "^1.10.0",
