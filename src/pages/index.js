@@ -8,7 +8,7 @@ import Testimonials from '../components/Testimonials'
 import MyWork from '../components/MyWork'
 import About from '../components/About'
 import GitHub from '../components/GitHub'
-import metadataLanding from '../images/metadata-landing.jpg'
+import metadataLanding from '../images/metadata-landing.png'
 import gatsbyConfig from '../../gatsby-config'
 
 const IndexPage = () => (
