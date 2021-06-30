@@ -2,6 +2,7 @@ import React from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { Link } from 'react-scroll'
 import { StyledMobileNavbar } from './StyledMobileNavbar'
+import gatsbyConfig from '../../../gatsby-config'
 
 export default function MobileNavbar({ menuOpen, toggle }) {
   const hideOverflow = () => {
@@ -58,13 +59,8 @@ export default function MobileNavbar({ menuOpen, toggle }) {
             </Link>
           </li>
           <li>
-            <a href="https://github.com/Riley-Brown" target="_blank">
+            <a href={`https://github.com/${gatsbyConfig.siteMetadata.github}`} target="_blank">
               GitHub
-            </a>
-          </li>
-          <li>
-            <a href="https://blog.riley.gg/" target="_blank">
-              Blog
             </a>
           </li>
         </ul>

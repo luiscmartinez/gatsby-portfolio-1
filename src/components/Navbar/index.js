@@ -37,13 +37,8 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <a href="https://github.com/Riley-Brown" target="_blank">
+            <a href={`https://github.com/${gatsbyConfig.siteMetadata.github}`} target="_blank">
               GitHub
-            </a>
-          </li>
-          <li>
-            <a href="https://blog.riley.gg/" target="_blank">
-              Blog
             </a>
           </li>
         </div>
