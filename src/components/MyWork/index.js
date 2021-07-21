@@ -4,12 +4,7 @@ import { StyledMyWork } from './StyledMyWork'
 import Card from './Card'
 import Modal from './Modal'
 
-import bayshells from 'images/bayshells-landing.jpg'
-import danielLanding from 'images/daniel-landing-page.jpg'
-import rawberri from 'images/rawberri-items.png'
 import learnLocker from 'images/learn-locker.png'
-import caseStudy from 'images/upwork-10-case-study.jpg'
-import wbFlashback from 'images/wb-flashback.jpg'
 import pepesMexicanFoodImg from 'images/pepe-mexican-food.png'
 import dataTonicImg from 'images/datatonic.png'
 
@@ -34,7 +29,7 @@ const data = [
     img: dataTonicImg,
     title: 'Data Tonic',
     body: 'A Take-Home Project assignment for Prism Studios.',
-    siteLink: 'https://datatonic.netlify.app/dashboard',
+    siteLink: 'https://datatonic.luismartinez.dev/dashboard',
     codeLink: 'https://github.com/luiscmartinez/datatonic-fe',
   },
 ]
