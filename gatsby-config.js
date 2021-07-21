@@ -1,11 +1,14 @@
 const author = 'Luis Martinez'
 const github = 'luiscmartinez'
+const siteUrl = process.env.URL || process.env.DEPLOY_URL || `https://luismartinez.dev`
+
 module.exports = {
   siteMetadata: {
     title: `${author} Web Developer | Portfolio`,
     description: `${author} Web Development Portfolio. Showcasing freelance and side project work. Tech stack includes vanilla JS, React, and Node.js`,
     author,
-    github
+    github,
+    siteUrl,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
