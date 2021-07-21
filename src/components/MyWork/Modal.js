@@ -69,7 +69,13 @@ export default function Modal({
         id="modal-backdrop"
       >
         <div className="container">
-          <img onClick={toggleModal} src={img} alt={title} />
+          <iframe
+            title={title}
+            width="100%"
+            height="500px"
+            src={siteLink}
+            objectFit="contain"
+          ></iframe>
           <button
             className="close-modal-btn"
             arial-label="Close My Work modal"
