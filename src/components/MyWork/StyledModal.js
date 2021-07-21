@@ -13,9 +13,9 @@ export const StyledModal = styled.div`
     position: relative;
     margin: 5% auto;
     margin-bottom: 0;
+    margin-top: 2%;
     position: relative;
     overflow: hidden;
-    width: 100%;
     height: 100em;
     /* padding-top: 55%; */
     /* @media (max-width: 600px) {
@@ -47,7 +47,9 @@ export const StyledModal = styled.div`
       bottom: 0;
       right: 0;
       width: 100%;
-      height: 85%;
+      height: 100%;
+      border: 4px solid white;
+
     }
   }
   .content {
