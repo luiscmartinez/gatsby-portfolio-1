@@ -7,7 +7,7 @@ export default function Modal({
   setIndex,
   show,
   toggleModal,
-  index,
+  clickedIndex,
   dataLength,
 }) {
   const { title, body, siteLink, codeLink, img } = data
@@ -29,7 +29,7 @@ export default function Modal({
       window.removeEventListener('keydown', arrowKeysNavigation)
     }
     return () => window.removeEventListener('keydown', arrowKeysNavigation)
-  }, [show, index])
+  }, [show, clickedIndex])
 
   const arrowKeysNavigation = e => {
     if (e.key === 'ArrowRight' || e.keyCode === 39) {
@@ -40,18 +40,18 @@ export default function Modal({
   }
 
   const next = () => {
-    if (index >= dataLength - 1) {
+    if (clickedIndex >= dataLength - 1) {
       setIndex(0)
     } else {
-      setIndex(index => index + 1)
+      setIndex(clickedIndex => clickedIndex + 1)
     }
   }
 
   const previous = () => {
-    if (index === 0) {
+    if (clickedIndex === 0) {
       setIndex(dataLength - 1)
     } else {
-      setIndex(index => index - 1)
+      setIndex(clickedIndex => clickedIndex - 1)
     }
   }
 

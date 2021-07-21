@@ -33,17 +33,15 @@ const data = [
   {
     img: dataTonicImg,
     title: 'Data Tonic',
-    body:
-      'A Take-Home Project assignment for Prism Studios.',
+    body: 'A Take-Home Project assignment for Prism Studios.',
     siteLink: 'https://datatonic.netlify.app/dashboard',
     codeLink: 'https://github.com/luiscmartinez/datatonic-fe',
   },
-  
 ]
 
 export default function MyWork() {
   const [show, setShow] = useState(false)
-  const [index, setIndex] = useState(0)
+  const [clickedIndex, setIndex] = useState(0)
 
   const activeModalImg = index => {
     setIndex(index)
@@ -66,11 +64,11 @@ export default function MyWork() {
         ))}
       </div>
       <Modal
-        data={data[index]}
+        data={data[clickedIndex]}
         setIndex={setIndex}
         toggleModal={toggleModal}
         show={show}
-        index={index}
+        clickedIndex={clickedIndex}
         dataLength={data.length}
       />
     </StyledMyWork>
