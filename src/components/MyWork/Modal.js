@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { StyledModal } from './StyledModal'
 import { CSSTransition } from 'react-transition-group'
 
@@ -15,11 +15,16 @@ export default function Modal({
   const hideOverflow = () => {
     document.querySelector('body').style.overflowY = 'hidden'
     document.querySelector('#modal-backdrop').style.overflowY = 'auto'
+    setLoading(true)
   }
+
+  // set to false since modal renders right away
+  const [isLoading, setLoading] = useState(false)
 
   const showOverflow = () => {
     document.querySelector('body').style.overflowY = 'auto'
     document.querySelector('#modal-backdrop').style.overflowY = 'hidden'
+    setLoading(false)
   }
 
   useEffect(() => {
@@ -55,6 +60,10 @@ export default function Modal({
     }
   }
 
+  const handleFrameOnLoad = e => {
+    setLoading(false)
+  }
+
   return (
     <CSSTransition
       timeout={300}
@@ -67,13 +76,16 @@ export default function Modal({
       <StyledModal
         onClick={e => (e.target.id === 'modal-backdrop' ? toggleModal() : null)}
         id="modal-backdrop"
+        isFrameLoading={isLoading}
       >
         <div className="container">
           <iframe
             title={title}
             className="wrapped-frame"
             src={siteLink}
+            onLoad={handleFrameOnLoad}
           ></iframe>
+          <div className="loading-placeholder" />
           <button
             className="close-modal-btn"
             arial-label="Close My Work modal"

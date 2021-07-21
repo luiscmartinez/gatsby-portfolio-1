@@ -49,7 +49,13 @@ export const StyledModal = styled.div`
       width: 100%;
       height: 100%;
       border: 4px solid white;
-
+      display: ${props => (props.isFrameLoading ? 'none' : 'block')};
+    }
+    .loading-placeholder {
+      display: ${props => (props.isFrameLoading ? 'block' : 'none')};
+      background-color: pink;
+      width: 100%;
+      height: 100%;
     }
   }
   .content {
