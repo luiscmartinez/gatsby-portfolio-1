@@ -27,12 +27,6 @@ function SEO({ lang, meta, img, title }) {
 
   const { description: metaDescription, author, siteUrl } = site.siteMetadata
 
-  // const rootUrl = () => {
-  //   if (typeof window !== 'undefined') {
-  //     return `${window.location.protocol}//${window.location.host}`
-  //   }
-  // }
-
   return (
     <Helmet
       htmlAttributes={{
