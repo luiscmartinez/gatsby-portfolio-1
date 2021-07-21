@@ -10,7 +10,7 @@ export default function Modal({
   clickedIndex,
   dataLength,
 }) {
-  const { title, body, siteLink, codeLink, img } = data
+  const { title, body, siteLink, codeLink } = data
 
   const hideOverflow = () => {
     document.querySelector('body').style.overflowY = 'hidden'
@@ -71,10 +71,8 @@ export default function Modal({
         <div className="container">
           <iframe
             title={title}
-            width="100%"
-            height="500px"
+            className="wrapped-frame"
             src={siteLink}
-            objectFit="contain"
           ></iframe>
           <button
             className="close-modal-btn"
@@ -83,7 +81,8 @@ export default function Modal({
           >
             &times;
           </button>
-          <div className="modal content">
+        </div>
+        <div className="modal content">
             <h4>{title}</h4>
             <p>{body}</p>
             <a href={siteLink} rel="noopener noreferrer" target="_blank">
@@ -93,7 +92,6 @@ export default function Modal({
               View Code
             </a>
           </div>
-        </div>
       </StyledModal>
     </CSSTransition>
   )

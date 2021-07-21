@@ -1,34 +1,62 @@
 import styled from 'styled-components'
 
 export const StyledModal = styled.div`
-  height: 100vh;
   background: rgba(0, 0, 0, 0.92);
-  width: 100%;
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   z-index: 200;
-  /* overflow: auto; */
   .container {
     max-width: 1200px;
-    width: 90%;
     position: relative;
     margin: 5% auto;
-    @media (max-width: 600px) {
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100em;
+    /* padding-top: 55%; */
+    /* @media (max-width: 600px) {
       margin: 15% auto;
     }
     @media (max-width: 600px) {
       width: 95%;
+    } */
+    .close-modal-btn {
+      position: absolute;
+      border: none;
+      top: 0;
+      color: red;
+      font-size: 6rem;
+      right: 0px;
+      height: 0;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: 200ms ease-out;
+      &:hover {
+        transition: 200ms ease-in;
+        opacity: 1;
+      }
     }
-    .content {
+    .wrapped-frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 85%;
+    }
+  }
+  .content {
       text-align: center;
       color: #fff;
       max-width: 700px;
       width: 90%;
       margin: 15px auto;
-
+      margin-top: 0;
       h4 {
         font-size: 3rem;
       }
@@ -48,28 +76,4 @@ export const StyledModal = styled.div`
         margin: 0px 15px;
       }
     }
-    img {
-      width: 95%;
-      cursor: pointer;
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-    }
-    .close-modal-btn {
-      position: absolute;
-      border: none;
-      top: 0;
-      color: red;
-      font-size: 6rem;
-      right: 0px;
-      height: 0;
-      cursor: pointer;
-      opacity: 0.8;
-      transition: 200ms ease-out;
-      &:hover {
-        transition: 200ms ease-in;
-        opacity: 1;
-      }
-    }
-  }
 `
