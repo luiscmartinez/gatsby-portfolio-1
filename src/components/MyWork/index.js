@@ -27,7 +27,7 @@ const data = [
     title: "Original Pepe's Mexican Food ",
     body:
       "Refactor client's multiple html page website into a single page application.",
-    siteLink: 'https://original-pepes.netlify.app',
+    siteLink: 'https://original-pepes.luismartinez.dev',
     codeLink: 'https://github.com/luiscmartinez/originalpepes',
   },
   {
