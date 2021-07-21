@@ -11,8 +11,8 @@ export default function Testimonial(props) {
             <h2>{props.title}</h2>
             {Array(5)
               .fill(null)
-              .map(() => (
-                <span className="star">&#9733;</span>
+              .map((ele, i) => (
+                <span className="star" key={i}>&#9733;</span>
               ))}
             <div className="body">
               <span className="quote">&#10077;</span>
