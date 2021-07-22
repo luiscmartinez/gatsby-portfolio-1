@@ -1,0 +1,26 @@
+[
+    {
+      "img": "learn-locker.png",
+      "title": "Learn Locker",
+      "body":
+        "LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.",
+      "siteLink": "https: //learnedadev.netlify.com/",
+      "codeLink": "https: //github.com/learneda"
+    },
+    {
+        "img": "pepes-mexican-food.png",
+        "title":  "Original Pepe's Mexican Food",
+        "body":
+        "Refactor client's multiple html page website into a single page application.",
+        "siteLink": "https://original-pepes.luismartinez.dev",
+        "codeLink": "https://github.com/luiscmartinez/originalpepes"
+      },
+      {
+        "img": "datatonic.png",
+        "title":  "Data Tonic",
+        "body":
+        "A Take-Home Project assignment for Prism Studios.",
+        "siteLink": "https://datatonic.luismartinez.dev/dashboard",
+        "codeLink": "https://github.com/luiscmartinez/datatonic-fe"
+      }
+]
