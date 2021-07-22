@@ -1,6 +1,7 @@
 const author = 'Luis Martinez'
 const github = 'luiscmartinez'
-const siteUrl = process.env.URL || process.env.DEPLOY_URL || `https://luismartinez.dev`
+const siteUrl =
+  process.env.URL || process.env.DEPLOY_URL || `https://luismartinez.dev`
 
 module.exports = {
   siteMetadata: {
@@ -11,33 +12,43 @@ module.exports = {
     siteUrl,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: 'websiteData',
+        path: `${__dirname}/src/data/websites.json`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-transformer-json`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        typeName: `Json`, // a fixed string
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-image`,
-    'gatsby-plugin-root-import',
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        // The option defaults to true
+        checkSupportedExtensions: false,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `carouselImages`,
+        path: `${__dirname}/src/images/carousel`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `sitePreviewImages`,
+        path: `${__dirname}/src/images/site-preview`,
+      },
+    }
   ],
 }
