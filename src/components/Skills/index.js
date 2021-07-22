@@ -5,7 +5,6 @@ import node from 'svg/nodejs.svg'
 import react from 'svg/react.svg'
 import sql from 'svg/sql.svg'
 import js from 'svg/javascript.svg'
-import git from 'svg/git.svg'
 import css from 'svg/css.svg'
 import typescript from 'svg/typescript.svg'
 
