@@ -18,10 +18,15 @@ export default function MyWork() {
       edges {
         node {
           id
-          body
           title
           siteLink
-          img
+          codeLink
+          body
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
       }
     }
@@ -46,6 +51,7 @@ export default function MyWork() {
             key={item.id}
             index={index}
             title={item.title}
+            image={item.image}
           />
         ))}
       </div>

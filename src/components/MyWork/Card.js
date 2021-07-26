@@ -1,7 +1,8 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-export default function Card({ img, activeModalImg, index, title }) {
+export default function Card({ image, activeModalImg, index, title }) {
   return (
     <Fade>
       <button
@@ -9,7 +10,7 @@ export default function Card({ img, activeModalImg, index, title }) {
         aria-label={`View ${title} image`}
         onClick={() => activeModalImg(index)}
       >
-          <img src={img} alt={title} />
+        <GatsbyImage image={getImage(image)} alt={title} />
       </button>
     </Fade>
   )
