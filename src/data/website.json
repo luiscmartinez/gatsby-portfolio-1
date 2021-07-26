@@ -4,8 +4,8 @@
       "title": "Learn Locker",
       "body":
         "LearnLocker is a full-stack social network learning application, built with 4 other web developers. Built using React, Node.js and PostgreSQL.",
-      "siteLink": "https: //learnedadev.netlify.com/",
-      "codeLink": "https: //github.com/learneda"
+      "siteLink": "https://learnlocker.app",
+      "codeLink": "https://github.com/learneda"
     },
     {
         "image": "../images/site-preview/pepe-mexican-food.png",
