@@ -7,3 +7,17 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
     },
   })
 }
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type WebsiteJson implements Node {
+      siteLink: String
+      title: String
+      codeLink: String
+      body: String
+      image: File
+    }
+  `
+  createTypes(typeDefs)
+}
