@@ -10,7 +10,6 @@ export const StyledModal = styled.div`
   z-index: 200;
   .container {
     max-width: 1200px;
-    position: relative;
     margin: 5% auto;
     margin-bottom: 0;
     margin-top: 2%;
@@ -56,32 +55,40 @@ export const StyledModal = styled.div`
       background-color: pink;
       width: 100%;
       height: 100%;
+      display: flex;
+      justify-content: center;
+      border: 4px solid red;
+      .iframe-loader {
+        display: flex;
+        align-self: center;
+      }
     }
   }
   .content {
-      text-align: center;
-      color: #fff;
-      max-width: 700px;
-      width: 90%;
-      margin: 15px auto;
-      margin-top: 0;
-      h4 {
-        font-size: 3rem;
-      }
-      p {
-        font-size: 2rem;
-        margin-bottom: 10px;
-        opacity: 0.85;
-        max-width: 650px;
-        margin: auto;
-        font-weight: 500;
-      }
-      a {
-        font-size: 2.2rem;
-        font-weight: 500;
-        text-decoration: none;
-        color: var(--primary);
-        margin: 0px 15px;
-      }
+    border: 5px solid pink;
+    text-align: center;
+    color: #fff;
+    max-width: 700px;
+    width: 90%;
+    margin: 15px auto;
+    margin-top: 0;
+    h4 {
+      font-size: 3rem;
     }
+    p {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      opacity: 0.85;
+      max-width: 650px;
+      margin: auto;
+      font-weight: 500;
+    }
+    a {
+      font-size: 2.2rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--primary);
+      margin: 0px 15px;
+    }
+  }
 `
