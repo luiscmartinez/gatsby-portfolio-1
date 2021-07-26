@@ -15,16 +15,12 @@ export default function Modal({
   const hideOverflow = () => {
     document.querySelector('body').style.overflowY = 'hidden'
     document.querySelector('#modal-backdrop').style.overflowY = 'auto'
-    setLoading(true)
   }
 
-  // set to false since modal renders right away
-  const [isLoading, setLoading] = useState(false)
 
   const showOverflow = () => {
     document.querySelector('body').style.overflowY = 'auto'
     document.querySelector('#modal-backdrop').style.overflowY = 'hidden'
-    setLoading(false)
   }
 
   useEffect(() => {
@@ -60,9 +56,7 @@ export default function Modal({
     }
   }
 
-  const handleFrameOnLoad = e => {
-    setLoading(false)
-  }
+
 
   return (
     <CSSTransition
@@ -76,16 +70,14 @@ export default function Modal({
       <StyledModal
         onClick={e => (e.target.id === 'modal-backdrop' ? toggleModal() : null)}
         id="modal-backdrop"
-        isFrameLoading={isLoading}
       >
         <div className="container">
           <iframe
             title={title}
             className="wrapped-frame"
             src={siteLink}
-            onLoad={handleFrameOnLoad}
+            loading="lazy"
           ></iframe>
-          <div className="loading-placeholder" />
           <button
             className="close-modal-btn"
             arial-label="Close My Work modal"
@@ -95,15 +87,15 @@ export default function Modal({
           </button>
         </div>
         <div className="modal content">
-            <h4>{title}</h4>
-            <p>{body}</p>
-            <a href={siteLink} rel="noopener noreferrer" target="_blank">
-              Visit Site
-            </a>
-            <a href={codeLink} rel="noopener noreferrer" target="_blank">
-              View Code
-            </a>
-          </div>
+          <h4>{title}</h4>
+          <p>{body}</p>
+          <a href={siteLink} rel="noopener noreferrer" target="_blank">
+            Visit Site
+          </a>
+          <a href={codeLink} rel="noopener noreferrer" target="_blank">
+            View Code
+          </a>
+        </div>
       </StyledModal>
     </CSSTransition>
   )
