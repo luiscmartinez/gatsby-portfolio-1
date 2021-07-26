@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'websiteData',
-        path: `${__dirname}/src/data/websites.json`,
+        name: 'website',
+        path: `${__dirname}/src/data/website.json`,
       },
     },
 
