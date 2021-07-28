@@ -52,7 +52,6 @@ export const StyledModal = styled.div`
     }
     .loading-placeholder {
       display: ${props => (props.isFrameLoading ? 'block' : 'none')};
-      background-color: pink;
       width: 100%;
       height: 100%;
       display: flex;
@@ -65,7 +64,6 @@ export const StyledModal = styled.div`
     }
   }
   .content {
-    border: 5px solid pink;
     text-align: center;
     color: #fff;
     max-width: 700px;
