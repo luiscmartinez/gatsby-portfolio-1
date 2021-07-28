@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { StyledModal } from './StyledModal'
 import { CSSTransition } from 'react-transition-group'
 
@@ -11,6 +11,8 @@ export default function Modal({
   dataLength,
 }) {
   const { title, body, siteLink, codeLink } = data
+
+  const prevFocusedElement = useRef(null)
 
   const hideOverflow = () => {
     document.querySelector('body').style.overflowY = 'hidden'
@@ -25,18 +27,31 @@ export default function Modal({
 
   useEffect(() => {
     if (show) {
-      window.addEventListener('keydown', arrowKeysNavigation)
-    } else {
-      window.removeEventListener('keydown', arrowKeysNavigation)
-    }
-    return () => window.removeEventListener('keydown', arrowKeysNavigation)
-  }, [show, clickedIndex])
+      window.addEventListener('keydown', handleKeyboardNavigation)
 
-  const arrowKeysNavigation = e => {
+      prevFocusedElement.current = document.activeElement
+      document.getElementById('modal-backdrop').focus()
+    } else {
+      window.removeEventListener('keydown', handleKeyboardNavigation)
+      prevFocusedElement.current?.focus()
+    }
+    return () => window.removeEventListener('keydown', handleKeyboardNavigation)
+  }, [show, index])
+
+  const handleKeyboardNavigation = e => {
     if (e.key === 'ArrowRight' || e.keyCode === 39) {
       next()
-    } else if (e.key === 'ArrowLeft' || e.keyCode === 37) {
+      return
+    }
+
+    if (e.key === 'ArrowLeft' || e.keyCode === 37) {
       previous()
+      return
+    }
+
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      toggleModal()
+      return
     }
   }
 
@@ -70,6 +85,7 @@ export default function Modal({
       <StyledModal
         onClick={e => (e.target.id === 'modal-backdrop' ? toggleModal() : null)}
         id="modal-backdrop"
+        tabIndex={0}
       >
         <div className="container">
           <iframe
@@ -81,6 +97,7 @@ export default function Modal({
           <button
             className="close-modal-btn"
             arial-label="Close My Work modal"
+            title="Close My Work modal"
             onClick={toggleModal}
           >
             &times;
