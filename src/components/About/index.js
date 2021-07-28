@@ -46,8 +46,9 @@ export default function About() {
           <div className="about" id="about">
             <h2>About Me</h2>
             <p>
-            Ahoy 👋, there. With nearly 4 years of web development experience under my belt, I have
-            enjoyed working with React, Redux, Node/Express and PostgresSQL and making applications optimize. 
+              I a good-looking developer with a focus on web technology. I
+              discovered web development in early 2018 and have been fascinated
+              with it ever since.
             </p>
             <p>
               I started with HTML on CodeCademy, then CSS and JavaScript. I
@@ -61,7 +62,7 @@ export default function About() {
               Python and C. Most importantly, I learned how to learn.
             </p>
             <p>
-              I am currently looking to join a team where I can contribute some fun sophisticated code. I keep myself ticking by learning Vietnamese language, and working on my personal side project thinklikeahorse.
+              I am currently working. 
             </p>
           </div>
         </Fade>
