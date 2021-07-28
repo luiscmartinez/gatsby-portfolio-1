@@ -10,13 +10,13 @@ export default function Testimonials() {
     {
       title: 'Build personal website',
       body:
-        'Great experience overall working with Luis. Very professional and quality of work exceeded my expectation. Will surely use again.',
+        'Great experience overall working with Riley. Very professional and quality of work exceeded my expectation. Will surely use again.',
     },
     {
       title:
         'Help dialing-in the JS/CSS/Responsiveness of a simple one-page website.',
       body:
-        'Luis was easy to work with, had great communication skills, and excelled at thinking of creative solutions to coding problems that ensured the finished product was perfect.',
+        'Riley was easy to work with, had great communication skills, and excelled at thinking of creative solutions to coding problems that ensured the finished product was perfect.',
     },
     {
       title: 'One Page website in one Day',
@@ -25,7 +25,7 @@ export default function Testimonials() {
     },
     {
       title: 'Customize a Bootstrap Template',
-      body: 'Luis is great to work with. Prompt and easy to communicate with.',
+      body: 'Riley is great to work with. Prompt and easy to communicate with.',
     },
   ]
 
