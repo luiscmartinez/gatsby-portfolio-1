@@ -1,6 +1,6 @@
 const author = "Riley Brown"
 const github ="riley-brown"
-const siteUrl = process.env.URL || process.env.DEPLOY_URL || `https://luismartinez.dev`
+const siteUrl = process.env.URL || process.env.DEPLOY_URL || `https://riley.gg`
 
 module.exports = {
   siteMetadata: {
