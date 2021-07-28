@@ -14,7 +14,10 @@ export default function Carousel() {
         edges {
           node {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(
+                placeholder: BLURRED
+                transformOptions: {cropFocus: CENTER}
+                )
             }
           }
         }
@@ -43,7 +46,7 @@ export default function Carousel() {
           appear={true}
         >
           <div className="img-wrapper">
-            <GatsbyImage image={carouselImages[index]} alt="carousel site img" />
+            <GatsbyImage image={carouselImages[index]} alt="carousel site img" placeholder="blurred"/>
           </div>
         </CSSTransition>
       </TransitionGroup>

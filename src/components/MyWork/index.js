@@ -24,7 +24,7 @@ export default function MyWork() {
           body
           image {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(placeholder: TRACED_SVG)
             }
           }
         }
