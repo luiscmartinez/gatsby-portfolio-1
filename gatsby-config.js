@@ -1,7 +1,6 @@
-const author = 'Luis Martinez'
-const github = 'luiscmartinez'
-const siteUrl =
-  process.env.URL || process.env.DEPLOY_URL || `https://luismartinez.dev`
+const author = "Riley Brown"
+const github ="riley-brown"
+const siteUrl = process.env.URL || process.env.DEPLOY_URL || `https://luismartinez.dev`
 
 module.exports = {
   siteMetadata: {

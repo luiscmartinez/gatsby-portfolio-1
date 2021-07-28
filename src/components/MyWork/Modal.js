@@ -36,7 +36,7 @@ export default function Modal({
       prevFocusedElement.current?.focus()
     }
     return () => window.removeEventListener('keydown', handleKeyboardNavigation)
-  }, [show, index])
+  }, [show, clickedIndex])
 
   const handleKeyboardNavigation = e => {
     if (e.key === 'ArrowRight' || e.keyCode === 39) {

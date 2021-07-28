@@ -25,25 +25,7 @@ export default function Carousel() {
     }
   `)
 
-  const imageNames = [
-    'rawberri-categories.jpg',
-    'rawberri-items.jpg',
-    'doge-flip.jpg',
-    'bayshells-landing.jpg',
-    'upwork-10-case-study.jpg',
-    'learn-locker.jpg',
-    'learn-locker-logged-in.jpg',
-  ]
-
-  const images = imageData.allImageSharp.edges
-    .filter(edge => {
-      for (let i = 0; i < imageNames.length; i++) {
-        if (edge.node.fluid.originalName === imageNames[i]) {
-          return edge
-        }
-      }
-    })
-    .reverse()
+ const carouselImages = imageData.allFile.edges.map(edge => getImage(edge.node))
 
   const carouselContainer = useRef()
 
