@@ -33,6 +33,9 @@ export const StyledAbout = styled.div`
       @media (max-width: 768px) {
         flex: 0 0 100%;
       }
+      img {
+        height: 430px;
+      }
     }
 
     .contact {
@@ -62,6 +65,12 @@ export const StyledAbout = styled.div`
   }
   h2 {
     font-size: 4rem;
+    color: #222;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font-size: 3.2rem;
     color: #222;
     text-align: center;
     margin-bottom: 10px;
