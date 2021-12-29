@@ -63,6 +63,9 @@ export default function MobileNavbar({ menuOpen, toggle }) {
               GitHub
             </a>
           </li>
+          <li>
+            <a href="https://blog.luismartinez.dev" target="_blank">Blog</a>
+          </li>
         </ul>
         <span onClick={toggle}>&times;</span>
       </StyledMobileNavbar>

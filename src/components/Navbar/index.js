@@ -41,6 +41,9 @@ export default function Navbar() {
               GitHub
             </a>
           </li>
+          <li>
+            <a href="https://blog.luismartinez.dev" target="_blank">Blog</a>
+          </li>
         </div>
         <img
           src={menuIcon}
