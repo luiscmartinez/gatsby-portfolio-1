@@ -49,6 +49,13 @@ module.exports = {
         name: `sitePreviewImages`,
         path: `${__dirname}/src/images/site-preview`,
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `aboutMeImages`,
+        path: `${__dirname}/src/images/about-me`,
+      },
     }
   ],
 }
