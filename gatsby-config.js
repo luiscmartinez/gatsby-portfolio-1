@@ -15,7 +15,25 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        serialize: (obj) => {
+          const { path } = obj
+          console.log('PATH', path)
+          const dt = new Date() //Date constructor
+          const dd = dt.getDate()
+          const mm = dt.getMonth() + 1
+          const yy = dt.getFullYear()
+          const date = `${yy}-${mm}-${dd}`
+          console.log('date', date)
+          return {
+            url: path,
+            lastmod: date,
+          }
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
